@@ -30,7 +30,8 @@ gulp.task('scripts', function() {
         .pipe(concat('all.js'))
         .pipe(rename('project.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('server/public/assets/scripts'));
+        .pipe(gulp.dest('server/public/assets/scripts'))
+        .pipe(livereload());
 });
 
 // Copy Client Views to Public Assets
