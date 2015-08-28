@@ -2,46 +2,6 @@
 
 @import 'variables';
 @import 'mixins';
-
-html {}
-body{
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
-}
-//Header Styling
-header{
-  background-color: $header-bg;
-  min-height: 50px;
-}
-//Body Styling
-#map{
-  flex: 1 0 auto;
-}
-.map-menu{
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: #fff;
-  z-index: 2;
-  max-height: 200px;
-  width: 300px;
-  overflow-y: scroll;
-  h2 {
-    font-size: 16px;
-  }
-}
-//Footer Styling
-footer{
-  background-color: $header-bg;
-  min-height: 50px;
-}
+@import 'layout';
+@import 'map-menu';
 

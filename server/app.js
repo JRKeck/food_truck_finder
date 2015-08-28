@@ -4,6 +4,7 @@ var app = express();
 var bodyParser = require('body-parser');
 
 //routes
+var mapdata = require('./routes/mapdata');
 var index = require('./routes/index');
 
 
@@ -13,7 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
-
+app.use('/mapdata', mapdata);
 app.use('/', index);
 
 app.listen(app.get('port'), function() {

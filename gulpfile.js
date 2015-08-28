@@ -45,6 +45,8 @@ gulp.task('views', function() {
 gulp.task('copy-vendors', function() {
     gulp.src(['node_modules/bootstrap/dist/css/bootstrap.min.css'])
         .pipe(gulp.dest('server/public/vendors/bootstrap'));
+    gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/jquery/dist/jquery.min.map'])
+        .pipe(gulp.dest('server/public/vendors/jquery'));
 });
 
 // Watch Files For Changes

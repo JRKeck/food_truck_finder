@@ -1,0 +1,79 @@
+[
+  {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -93.2638,
+            44.98
+          ]
+        },
+        "properties": {
+          "address": "1471 P St NW",
+          "city": "Washington DC",
+          "country": "United States",
+          "crossStreet": "at 15th St NW",
+          "postalCode": "20005",
+          "state": "D.C."
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -93.263169,
+            44.965539
+          ]
+        },
+        "properties": {
+          "address": "1471 P St NW",
+          "city": "Washington DC",
+          "country": "United States",
+          "crossStreet": "at 15th St NW",
+          "postalCode": "20005",
+          "state": "D.C."
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -93.268725,
+            44.976765
+          ]
+        },
+        "properties": {
+          "address": "1471 P St NW",
+          "city": "Washington DC",
+          "country": "United States",
+          "crossStreet": "at 15th St NW",
+          "postalCode": "20005",
+          "state": "D.C."
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -93.163169,
+            44.865539
+          ]
+        },
+        "properties": {
+          "address": "1471 P St NW",
+          "city": "Washington DC",
+          "country": "United States",
+          "crossStreet": "at 15th St NW",
+          "postalCode": "20005",
+          "state": "D.C."
+        }
+      }
+    ]
+  }
+]
