@@ -1,4 +1,10 @@
 var mapMarkers;
+var testMapMarkers = [
+    {
+        "type": "FeatureCollection",
+        "features": [1,2,3,4]
+    }
+];
 
 function ajaxGet(route) {
     $.ajax({
