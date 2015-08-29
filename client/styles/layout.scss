@@ -4,43 +4,42 @@ html,
 body {
   height: 100%;
   /* The html and body elements cannot have any padding or margin. */
+  padding: 0;
+  margin: 0;
 }
-header {
-  height: $header-height;
-}
-/* Wrapper for page content to push down footer */
-.wrap {
+//Wrapper for page content to push down footer
+#wrap {
   min-height: 100%;
   height: 100%;
-  /* Negative indent footer by its height */
+  // Negative indent footer by its height
   margin: 0 auto -#{$footer-height} 0;
-  /* Pad bottom by footer height */
+  // Pad bottom by footer height
   padding: 0 0 $footer-height 0;
   .center-container {
-    padding: 0 0 $header-height 0;
+    padding: $header-height 0 0 0;
     margin:0;
     height:100%;
   }
 }
-.map-menu {
-  position: absolute;
-  right: $map-menu-margin-right;
-  top: 0;
-  z-index: 2;
-  margin-top: -#{$footer-height};
-  padding-top: $footer-height + $header-height + $map-menu-margin-top;
-  padding-bottom: $map-menu-margin-top;
-  background-color: transparent;
-  height: 100%; //strech entire height of map div
-  overflow: none;
-
-
+header {
+  position: fixed;
+  height: $header-height;
 }
+// The map container
 .map-container {
   height:100%;
+  position: relative;
 }
-
-/* Set the fixed height of the footer here */
+.map-menu {
+  position: absolute;
+  top: 0;
+  right: $map-menu-margin-right;
+  z-index: 2;
+}
+#map {
+  height: 100%;
+}
+// Set the fixed height of the footer
 footer {
   height: $footer-height;
 }

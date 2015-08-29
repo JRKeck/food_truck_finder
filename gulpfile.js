@@ -41,6 +41,13 @@ gulp.task('views', function() {
        .pipe(livereload());
 });
 
+// Copy Client Images to Public Assets
+gulp.task('images', function() {
+    return gulp.src('client/images/**/*')
+        .pipe(gulp.dest('server/public/assets/images'))
+        .pipe(livereload());
+});
+
 // Copy Node Modules to Public Vendors
 gulp.task('copy-vendors', function() {
     gulp.src(['node_modules/bootstrap/dist/css/bootstrap.min.css'])

@@ -16,6 +16,7 @@ var MapMarkerSchema = new Schema({
     "properties": {
         "truckName": String,
         "simpleAddress": String,
+        "city": String,
         "fullAddress": String,
         "createTime": { type: Date, default: Date.now },
         "closeTime": Date

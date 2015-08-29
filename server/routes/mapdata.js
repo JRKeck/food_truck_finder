@@ -3,26 +3,23 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var path = require('path');
 var MapMarker = require('../models/map-marker.js');
-//Pull in the server json data
-var mapmarkers = require('../data/mapmarkers.json');
 
 
-//router.get('/getmarkers', function(req, res, next){
-//    console.log('map marker get request made');
-//    res.send(mapmarkers)
-//});
-
+//Get map markers from DB
 router.get("/getmarkers", function(req,res,next){
     return MapMarker.find({}).exec(function(err, info){
         if(err) throw new Error(err);
-        var geojson = {
+        var markerObjects = {
             "type": "FeatureCollection",
             "features": info
         };
+        var geojson = [];
+        geojson.push(markerObjects);
         res.send(geojson);
     });
 });
 
+//Add truck location to db
 router.get('/addlocation', function(req, res, next){
     console.log('location add attempt');
     var mapMarker = new MapMarker(
@@ -36,6 +33,7 @@ router.get('/addlocation', function(req, res, next){
             "properties": {
                 "truckName": "Chef Shack",
                 "simpleAddress": "114 E 13th St",
+                "city": "Minneapolis MN",
                 "fullAddress": "114 E 13th St, New York, 10003, New York, United States",
                 "closeTime": "2012-03-08T12:17:24.000Z"
             }

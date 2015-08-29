@@ -5,42 +5,41 @@
 html,
 body {
   height: 100%;
-  /* The html and body elements cannot have any padding or margin. */ }
+  /* The html and body elements cannot have any padding or margin. */
+  padding: 0;
+  margin: 0; }
 
-header {
-  height: 75px; }
-
-/* Wrapper for page content to push down footer */
-.wrap {
+#wrap {
   min-height: 100%;
   height: 100%;
-  /* Negative indent footer by its height */
   margin: 0 auto -50px 0;
-  /* Pad bottom by footer height */
   padding: 0 0 50px 0; }
-  .wrap .center-container {
-    padding: 0 0 75px 0;
+  #wrap .center-container {
+    padding: 75px 0 0 0;
     margin: 0;
     height: 100%; }
 
-.map-menu {
-  position: absolute;
-  right: 50px;
-  top: 0;
-  z-index: 2;
-  margin-top: -50px;
-  padding-top: 165px;
-  padding-bottom: 40px;
-  background-color: transparent;
-  height: 100%;
-  overflow: none; }
+header {
+  position: fixed;
+  height: 75px; }
 
 .map-container {
+  height: 100%;
+  position: relative; }
+
+.map-menu {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  z-index: 2; }
+
+#map {
   height: 100%; }
 
-/* Set the fixed height of the footer here */
 footer {
   height: 50px; }
 
-.map-menu .trucks-nearby {
-  background-color: #fff; }
+.map-menu {
+  width: 300px; }
+  .map-menu .trucks-nearby {
+    background-color: #fff; }
