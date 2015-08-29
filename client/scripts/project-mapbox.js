@@ -31,7 +31,7 @@ map.setView([44.98,-93.2638], 14);
 map.scrollWheelZoom.disable();
 
 //Initiate a geolocation on the user
-//map.locate();
+map.locate();
 
 //get map markers
 ajaxGet("mapdata/getmarkers");

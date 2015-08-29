@@ -14,7 +14,11 @@ var MapMarkerSchema = new Schema({
         "coordinates": []
     },
     "properties": {
-        "address": String
+        "truckName": String,
+        "simpleAddress": String,
+        "fullAddress": String,
+        "createTime": { type: Date, default: Date.now },
+        "closeTime": Date
     }
 });
 
