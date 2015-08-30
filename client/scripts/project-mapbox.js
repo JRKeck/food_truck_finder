@@ -12,7 +12,7 @@ function getMarkerData() {
     });//End ajax call
 }
 
-function geolocateClient(){
+function geolocateUser(){
     //Initiate a geolocation on the user
     map.locate();
 
@@ -49,9 +49,9 @@ var map = L.mapbox.map('map', 'jrkeck.7fbfb356');
 map.setView([44.98,-93.2638], 14);
 
 //Disable the f'n scroll zoom
-map.scrollWheelZoom.disable();
+//map.scrollWheelZoom.disable();
 
-//geolocateClient();
+//geolocateUser();
 
 //get map markers
 getMarkerData();
@@ -116,12 +116,12 @@ function populateMap(markerObj){
         popup += '</div>';
         locale.bindPopup(popup);
 
-        locale.setIcon(L.icon({
-            iconUrl: '/assets/images/map-markers/marker.png',
-            iconSize: [56, 56],
-            iconAnchor: [28, 28],
-            popupAnchor: [0, -34]
-        }));
+        //locale.setIcon(L.icon({
+        //    iconUrl: '/assets/images/map-markers/marker.png',
+        //    iconSize: [56, 56],
+        //    iconAnchor: [28, 28],
+        //    popupAnchor: [0, -34]
+        //}));
 
     });
 
