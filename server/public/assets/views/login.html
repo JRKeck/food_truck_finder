@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--STYLES-->
+
+    <link rel="stylesheet" href="/vendors/bootstrap/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="/vendors/font-awesome/css/font-awesome.min.css">-->
+    <link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    <title>Food Truck Finder | Login</title>
+</head>
+<body>
+<!-- Wrap to push footer down -->
+<div id="wrap">
+
+    <!-- Fixed navbar -->
+    <header class="navbar navbar-default navbar-fixed-top">
+        Food Truck Finder
+    </header>
+    <!-- Begin page content -->
+    <div class="center-container">
+        <div class="container content-container">
+            <h1>Sign In</h1>
+            <div class="user row">
+                <form action="/login" method="post">
+                    <div>
+                        <label class="sr-only" for="username">Username:</label>
+                        <input type="text" name="username" id="username" placeholder="Username"/>
+                    </div>
+                    <div>
+                        <label class="sr-only" for="password">Password:</label>
+                        <input type="password" name="password" id="password" placeholder="Password"/>
+                    </div>
+                    <div>
+                        <input class="btn btn-positive" type="submit" value="Sign In"/>
+                    </div>
+                    <div>
+                        <a href="/signup">
+                            <input class="btn btn-information" type="button" value="Create Account"/>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    Footer
+</footer>
+<!--Scripts-->
+<script src='/vendors/jquery/jquery.min.js'></script>
+<script src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+<script type="text/javascript" src="/assets/scripts/project.min.js"></script>
+</body>
+</html>

@@ -10,9 +10,13 @@
   "author": "Josh Keck",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^0.8.5",
     "body-parser": "^1.13.3",
     "express": "^4.13.3",
+    "express-session": "^1.11.3",
     "mongoose": "^4.1.3",
+    "passport": "^0.3.0",
+    "passport-local": "^1.0.0",
     "path": "^0.11.14"
   },
   "devDependencies": {
