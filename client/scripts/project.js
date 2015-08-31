@@ -30,8 +30,10 @@ function truckListingHeight(){
     var truckMenuHeight = parseInt($('.trucks-nearby').height());
     var truckMenuHeader = parseInt($('.trucks-nearby-header').outerHeight(true));
     var truckMenuFooter = parseInt($('.trucks-nearby-footer').outerHeight(true));
-    var truckListingHeight = truckMenuHeight - (truckMenuHeader + truckMenuFooter);
-    truckListingHeight += "px";
+    var listingHeight = truckMenuHeight - (truckMenuHeader + truckMenuFooter);
+    console.log(listingHeight);
+    listingHeight = listingHeight + "px";
+    console.log(listingHeight);
     // Set the listing height
-    $('.truck-listing').css('max-height', truckListingHeight);
+    $('.truck-listing').css('max-height', listingHeight);
 }
