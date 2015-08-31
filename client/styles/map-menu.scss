@@ -1,9 +1,21 @@
-.map-menu {
-  width: 300px;
-  .trucks-nearby{
+.trucks-nearby {
+  width: 250px;
+  overflow: hidden;
+  margin-top: $map-menu-margin-top;
+  margin-right: $map-menu-margin-right;
     background-color: #fff;
+    h2 {
+      font-size: 20px;
+      margin: 0;
+    }
+  .truck-listing {
+    overflow-y: scroll;
   }
-  .truck-listing{
-
+  .truck {
+    padding: 10px;
+    h3 {
+      font-size: 16px;
+      margin: 0;
+    }
   }
 }

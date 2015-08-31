@@ -125,6 +125,8 @@ function populateMap(markerObj){
 
     });
 
+    // Resize the div height
+    trucksNearbyHeight();
 }
 
 

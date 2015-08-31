@@ -27,10 +27,10 @@ header {
   height: 100%;
   position: relative; }
 
-.map-menu {
+.trucks-nearby {
   position: absolute;
   top: 0;
-  right: 50px;
+  right: 0;
   z-index: 2; }
 
 #map {
@@ -39,7 +39,19 @@ header {
 footer {
   height: 50px; }
 
-.map-menu {
-  width: 300px; }
-  .map-menu .trucks-nearby {
-    background-color: #fff; }
+.trucks-nearby {
+  width: 250px;
+  overflow: hidden;
+  margin-top: 40px;
+  margin-right: 50px;
+  background-color: #fff; }
+  .trucks-nearby h2 {
+    font-size: 20px;
+    margin: 0; }
+  .trucks-nearby .truck-listing {
+    overflow-y: scroll; }
+  .trucks-nearby .truck {
+    padding: 10px; }
+    .trucks-nearby .truck h3 {
+      font-size: 16px;
+      margin: 0; }
