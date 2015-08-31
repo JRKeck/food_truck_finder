@@ -21,7 +21,8 @@ body {
 
 header {
   position: fixed;
-  height: 75px; }
+  height: 75px;
+  width: 100%; }
 
 .map-container {
   height: 100%;
@@ -39,6 +40,15 @@ header {
 footer {
   height: 50px; }
 
+/* header.scss */
+header {
+  padding: 10px; }
+  header .user {
+    float: right; }
+    header .user .user-login {
+      display: none; }
+
+/* map-menu.scss */
 .trucks-nearby {
   width: 250px;
   overflow: hidden;

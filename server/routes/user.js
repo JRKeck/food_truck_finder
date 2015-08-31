@@ -21,6 +21,16 @@ router.post('/create', function(req,res,next) {
     })
 });
 
+// Send create account view
+router.get('/profile', function(req, res, next){
+    if(req.isAuthenticated()) {
+        res.json(req.user);
+    }
+    else {
+        res.json('Not Sigend In');
+    }
+});
+
 router.get('/*', function(req, res, next){
     res.redirect('/');
 });

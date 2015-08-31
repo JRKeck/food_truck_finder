@@ -1,0 +1,11 @@
+/* header.scss */
+
+header {
+  padding: 10px;
+  .user {
+    float: right;
+    .user-login {
+      display: none;
+    }
+  }
+}

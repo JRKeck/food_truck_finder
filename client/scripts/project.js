@@ -3,6 +3,7 @@ $(document).ready(function(){
 
     console.log('Client stript is loaded');
 
+    getUserInfo();
 
 
 
@@ -10,6 +11,25 @@ $(document).ready(function(){
         trucksNearbyHeight();
     });
 });
+
+function getUserInfo(){
+    $.ajax({
+        url: "/user/profile",
+        success: function(data){
+            if(data.username) {
+                $('.user-login').remove();
+                displayProfile(data);
+            }
+            else{
+                $('.user-login').show();
+            }
+        }
+    });//End ajax call
+}
+
+function displayProfile(user){
+    $('.user-info').html(user.username);
+}
 
 function trucksNearbyHeight(){
     // Get height of parent div

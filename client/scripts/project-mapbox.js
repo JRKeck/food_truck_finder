@@ -48,7 +48,7 @@ var map = L.mapbox.map('map', 'jrkeck.7fbfb356');
 //Set initial map view to Minneapolis
 map.setView([44.98,-93.2638], 14);
 
-//Disable the f'n scroll zoom
+//Disable the scroll zoom
 //map.scrollWheelZoom.disable();
 
 //geolocateUser();
