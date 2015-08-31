@@ -31,7 +31,7 @@ function truckListingHeight(){
     var truckMenuHeader = parseInt($('.trucks-nearby-header').outerHeight(true));
     var truckMenuFooter = parseInt($('.trucks-nearby-footer').outerHeight(true));
     var truckListingHeight = truckMenuHeight - (truckMenuHeader + truckMenuFooter);
-    truckListingHeight = truckListingHeight + "px";
+    truckListingHeight += "px";
     // Set the listing height
     $('.truck-listing').css('max-height', truckListingHeight);
 }

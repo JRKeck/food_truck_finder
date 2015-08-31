@@ -116,16 +116,16 @@ function populateMap(markerObj){
         popup += '</div>';
         locale.bindPopup(popup);
 
-        //locale.setIcon(L.icon({
-        //    iconUrl: '/assets/images/map-markers/marker.png',
-        //    iconSize: [56, 56],
-        //    iconAnchor: [28, 28],
-        //    popupAnchor: [0, -34]
-        //}));
+        locale.setIcon(L.icon({
+            iconUrl: '/assets/images/map-markers/marker.png',
+            iconSize: [65, 50],
+            iconAnchor: [33,50],
+            popupAnchor: [0, -50]
+        }));
 
     });
 
-    // Resize the div height
+    // Resize the div height once we have the list populated
     trucksNearbyHeight();
 }
 
