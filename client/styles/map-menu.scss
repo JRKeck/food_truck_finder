@@ -3,7 +3,7 @@
 .trucks-nearby {
   overflow: hidden;
   width: 100%;
-  height: 40%;
+  top: 60%;
   bottom: 0;
   margin-top: $map-menu-margin-top;
   margin-right: $map-menu-margin-right;
@@ -13,8 +13,6 @@
     bottom: inherit;
     right: 0;
     width: 250px;
-    height: auto;
-
   }
   .trucks-nearby-header{
     h2 {
