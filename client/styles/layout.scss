@@ -28,7 +28,6 @@ body {
 }
 header {
   position: fixed;
-  height: $header-height;
   width: 100%;
 }
 // The map container
@@ -38,12 +37,16 @@ header {
 }
 .trucks-nearby {
   position: absolute;
-  top: 0;
-  right: 0;
   z-index: 2;
 }
 #map {
   height: 100%;
+  .leaflet-compact-attribution{
+    display: none;
+  }
+  .mapbox-logo{
+    display: none;
+  }
 }
 // Set the fixed height of the footer
 footer {

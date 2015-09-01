@@ -39,6 +39,12 @@ function displayProfile(user){
     $('.user-info').html(user.displayName);
 }
 
+function setMapMenuLarge(){
+
+    $('.trucks-nearby').addClass('large');
+
+}
+
 function trucksNearbyHeight(){
     // Get height of parent div
     var mapHeight = $('.map-container').height();

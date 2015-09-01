@@ -19,13 +19,12 @@ body {
   margin: 0 auto -50px 0;
   padding: 0 0 50px 0; }
   #wrap .center-container {
-    padding: 75px 0 0 0;
+    padding: 51px 0 0 0;
     margin: 0;
     height: 100%; }
 
 header {
   position: fixed;
-  height: 75px;
   width: 100%; }
 
 .map-container {
@@ -34,19 +33,22 @@ header {
 
 .trucks-nearby {
   position: absolute;
-  top: 0;
-  right: 0;
   z-index: 2; }
 
 #map {
   height: 100%; }
+  #map .leaflet-compact-attribution {
+    display: none; }
+  #map .mapbox-logo {
+    display: none; }
 
 footer {
   height: 50px; }
 
 /* header.scss */
 header {
-  padding: 10px; }
+  padding: 10px;
+  height: 51px; }
   header .user {
     float: right; }
     header .user .user-login {
@@ -61,12 +63,20 @@ header {
 
 /* map-menu.scss */
 .trucks-nearby {
-  width: 250px;
   overflow: hidden;
+  width: 100%;
+  height: 40%;
+  bottom: 0;
   margin-top: 40px;
   margin-right: 50px;
   background-color: #fff; }
-  .trucks-nearby h2 {
+  @media (min-width: 825px) {
+    .trucks-nearby {
+      top: 0;
+      bottom: inherit;
+      right: 0;
+      width: 250px; } }
+  .trucks-nearby .trucks-nearby-header h2 {
     font-size: 20px;
     margin: 0; }
   .trucks-nearby .truck-listing {
@@ -76,3 +86,10 @@ header {
     .trucks-nearby .truck h3 {
       font-size: 16px;
       margin: 0; }
+  .trucks-nearby .trucks-nearby-footer {
+    height: 0px;
+    display: none; }
+    @media (min-width: 825px) {
+      .trucks-nearby .trucks-nearby-footer {
+        height: auto;
+        display: block; } }
