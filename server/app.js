@@ -20,7 +20,12 @@ var User = require('./models/user');
 // Mongo setup
 var mongoose = require("mongoose");
 
-var mongoURI = "mongodb://localhost/food_truck_finder_app";
+//Local DB
+//var mongoURI = "mongodb://localhost/food_truck_finder_app";
+
+//Mongo Labs DB
+var mongoURI = "mongodb://joshrkeck:Iu8DhkAFS2pl@ds035723.mongolab.com:35723/food_truck_finder_app";
+
 var MongoDB = mongoose.connect(mongoURI).connection;
 
 MongoDB.on('error', function (err) {
