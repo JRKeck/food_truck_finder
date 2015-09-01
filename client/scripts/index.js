@@ -14,14 +14,6 @@ $(document).ready(function(){
     });
 });
 
-
-
-function setMapMenuLarge(){
-
-    $('.trucks-nearby').addClass('large');
-
-}
-
 function trucksNearbyHeight(){
     // Get height of parent div
     var mapHeight = $('.map-container').height();

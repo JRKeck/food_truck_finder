@@ -1,3 +1,5 @@
+var mapboxToken = 'pk.eyJ1IjoianJrZWNrIiwiYSI6IjgzZTA0NmVhOGUxMjc2NjhmODYwYmQ3ZGIyZTRkOWQ1In0.XM9mizd6bF8zCqwafrGLDQ';
+
 function userLogout(){
     $.ajax({
         url: "/user/logout",
