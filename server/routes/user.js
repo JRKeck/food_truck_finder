@@ -22,7 +22,7 @@ router.post('/create', function(req,res,next) {
 });
 
 // Send create account view
-router.get('/profile', function(req, res, next){
+router.get('/getprofile', function(req, res, next){
     if(req.isAuthenticated()) {
         res.json(req.user);
     }

@@ -7,7 +7,9 @@ var bodyParser = require('body-parser');
 var indexRoute = require('./routes/index');
 var userRoute = require('./routes/user');
 var loginRoute = require('./routes/user_login');
+var checkinRoute = require('./routes/checkin');
 var mapdataRoute = require('./routes/mapdata');
+
 
 
 // Authentication reuires
@@ -59,6 +61,7 @@ passport.use('local', new localStrategy({ passReqToCallback : true, usernameFiel
 ));
 
 // Routes
+app.use('/add-truck-location', checkinRoute);
 app.use('/user', userRoute);
 app.use('/login', loginRoute);
 app.use('/mapdata', mapdataRoute);

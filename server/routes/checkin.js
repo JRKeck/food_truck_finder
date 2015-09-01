@@ -4,7 +4,7 @@ var path = require('path');
 
 
 router.get('/*', function(req, res, next){
-    var file = req.params[0] || 'assets/views/index.html';
+    var file = req.params[0] || 'assets/views/user_checkin.html';
     res.sendFile(path.join(__dirname, '../public/', file));
 });
 

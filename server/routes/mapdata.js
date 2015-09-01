@@ -46,6 +46,9 @@ router.get('/addtrucklocation', function(req, res, next){
     });
 });
 
+router.get('/*', function(req, res, next){
+    res.redirect('/');
+});
 
 
 module.exports = router;

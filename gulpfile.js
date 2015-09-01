@@ -26,7 +26,7 @@ gulp.task('sass', function() {
 
 // Concatenate & Minify Index View JS
 gulp.task('scripts-index', function() {
-    return gulp.src(['client/scripts/project_mapbox.js','client/scripts/index.js'])
+    return gulp.src(['client/scripts/index.js','client/scripts/master_functions.js','client/scripts/project_mapbox.js'])
         .pipe(concat('all.js'))
         .pipe(rename('project.min.js'))
         .pipe(uglify())
@@ -35,10 +35,20 @@ gulp.task('scripts-index', function() {
 });
 
 // Concatenate & Minify Login/Register View JS
-gulp.task('scripts-create', function() {
-    return gulp.src(['client/scripts/login_register.js'])
+gulp.task('scripts-user-auth', function() {
+    return gulp.src(['client/scripts/login_register.js','client/scripts/master_functions.js'])
         .pipe(concat('all.js'))
         .pipe(rename('create-account.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('server/public/assets/scripts'))
+        .pipe(livereload());
+});
+
+// Concatenate & Minify Login/Register View JS
+gulp.task('scripts-user-checkin', function() {
+    return gulp.src(['client/scripts/checkin.js','client/scripts/master_functions.js'])
+        .pipe(concat('all.js'))
+        .pipe(rename('truck-checkin.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('server/public/assets/scripts'))
         .pipe(livereload());
@@ -75,5 +85,5 @@ gulp.task('watch', function() {
 });
 
 // Default Task
-gulp.task('default', ['lint', 'sass', 'scripts-index', 'scripts-create', 'views', 'images', 'copy-vendors', 'watch']);
+gulp.task('default', ['lint', 'sass', 'scripts-index', 'scripts-user-auth', 'scripts-user-checkin', 'views', 'images', 'copy-vendors', 'watch']);
 
