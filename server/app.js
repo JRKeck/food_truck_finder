@@ -39,7 +39,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Passport session
 app.use(session({
-    secret: 'secret',
+    secret: '1234554321',
     key: 'user',
     resave: true,
     saveUninitialized: false,

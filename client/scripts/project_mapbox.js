@@ -13,6 +13,11 @@ function getMarkerData() {
 }
 
 function geolocateUser(){
+    console.log("geolocating");
+    if (!navigator.geolocation) {
+       console.log('Geolocation is not available');
+    }
+
     //Initiate a geolocation on the user
     map.locate();
 
@@ -22,6 +27,7 @@ function geolocateUser(){
     // Once we've got a position, zoom and center the map
     // on it, and add a single marker.
     map.on('locationfound', function(e) {
+        console.log('location found');
         map.setView([e.latlng.lat, e.latlng.lng], 14);
 
         clientLocLayer.setGeoJSON({
@@ -37,6 +43,9 @@ function geolocateUser(){
             }
         });
     });
+    map.on('locationerror', function() {
+        console.log('Position could not be found');
+    });
 }
 
 
@@ -51,7 +60,7 @@ map.setView([44.98,-93.2638], 14);
 //Disable the scroll zoom
 //map.scrollWheelZoom.disable();
 
-//geolocateUser();
+geolocateUser();
 
 //get map markers
 getMarkerData();

@@ -26,7 +26,7 @@ gulp.task('sass', function() {
 
 // Concatenate & Minify Index View JS
 gulp.task('scripts-index', function() {
-    return gulp.src(['client/scripts/index.js','client/scripts/project_mapbox.js','client/scripts/user_auth.js'])
+    return gulp.src(['client/scripts/project_mapbox.js','client/scripts/index.js'])
         .pipe(concat('all.js'))
         .pipe(rename('project.min.js'))
         .pipe(uglify())
