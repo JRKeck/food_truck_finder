@@ -48,7 +48,7 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
-passport.use('local', new localStrategy({ passReqToCallback : true, usernameField: 'username' },
+passport.use('local', new localStrategy({ passReqToCallback : true, usernameField: 'email' },
     function(req, username, password, done) {
     }
 ));
@@ -77,10 +77,10 @@ passport.deserializeUser(function(id, done) {
 
 passport.use('local', new localStrategy({
         passReqToCallback : true,
-        usernameField: 'username'
+        usernameField: 'email'
     },
     function(req, username, password, done){
-        User.findOne({ username: username }, function(err, user) {
+        User.findOne({ email: username }, function(err, user) {
             if (err) throw err;
             if (!user)
                 return done(null, false, {message: 'Incorrect username and password.'});

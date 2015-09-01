@@ -30,6 +30,10 @@ router.get('/profile', function(req, res, next){
         res.json('Not Sigend In');
     }
 });
+router.get('/logout', function(req, res, next){
+    req.logout();
+    res.redirect('/');
+});
 
 router.get('/*', function(req, res, next){
     res.redirect('/');

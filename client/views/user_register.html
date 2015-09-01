@@ -7,7 +7,6 @@
 
     <link rel="stylesheet" href="/vendors/bootstrap/bootstrap.min.css">
     <!--<link rel="stylesheet" href="/vendors/font-awesome/css/font-awesome.min.css">-->
-    <link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet'/>
     <link rel="stylesheet" href="/assets/styles/style.css">
     <title>Food Truck Finder | Create Account</title>
 </head>
@@ -16,27 +15,62 @@
 <div id="wrap">
 
     <!-- Fixed navbar -->
-    <header class="navbar navbar-default navbar-fixed-top">
+    <header>
         Food Truck Finder
     </header>
     <!-- Begin page content -->
     <div class="center-container">
-        <div class="container content-container">
-            <h1>Create Account</h1>
-            <div class="row">
-                <form action="/user/create" novalidate method="post">
-                    <div>
-                        <label class="sr-only" for="username">Username:</label>
-                        <input type="text" name="username" id="username" placeholder="Username"/>
-                    </div>
-                    <div>
-                        <label class="sr-only" for="password">Password:</label>
-                        <input type="password" name="password" id="password" placeholder="Password" ng-minlength=5/>
-                    </div>
-                    <div>
-                        <input class="btn btn-positive" type="submit" value="Register"/>
-                    </div>
-                </form>
+        <div class="container-fluid content-container register">
+            <div class="col-center col-sm-6">
+                <h1>Create Account</h1>
+                <div class="user-check">
+                    Do you own a Food Truck?
+                    <button class="btn btn-truck">Register as Food Truck Owner</button>
+                    That's okay if you don't, users can report food truck locations as well.
+                    <button class="btn btn-user">Register as a User</button>
+                </div>
+                <div class="register-user">
+                    <form action="/user/create" novalidate method="post">
+                        <div>
+                            <label class="sr-only" for="email">Email:</label>
+                            <input type="text" name="email" id="email" placeholder="Email"/>
+                        </div>
+                        <div>
+                            <label class="sr-only" for="displayName">Name:</label>
+                            <input type="text" name="displayName" id="displayName" placeholder="Name"/>
+                        </div>
+                        <div>
+                            <label class="sr-only" for="password">Password:</label>
+                            <input type="password" name="password" id="password" placeholder="Password"/>
+                        </div>
+                        <div>
+                            <input class="btn btn-positive" type="submit" value="Register"/>
+                        </div>
+                    </form>
+                </div>
+                <div class="register-truck">
+                    <form action="/user/create" novalidate method="post">
+                        <div>
+                            <label class="sr-only" for="email">Email:</label>
+                            <input type="text" name="email" id="email" placeholder="Email"/>
+                        </div>
+                        <div>
+                            <label class="sr-only" for="displayName">Truck Name:</label>
+                            <input type="text" name="displayName" id="displayName" placeholder="Truck Name"/>
+                        </div>
+                        <div>
+                            <label class="sr-only" for="password">Password:</label>
+                            <input type="password" name="password" id="password" placeholder="Password"/>
+                        </div>
+                        <div>
+                            <input type="hidden" name="userType" id="userType" value="truck"/>
+                        </div>
+                        <div>
+                            <input class="btn btn-positive" type="submit" value="Register"/>
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </div>
     </div>
@@ -46,7 +80,7 @@
 </footer>
 <!--Scripts-->
 <script src='/vendors/jquery/jquery.min.js'></script>
-<script src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
-<script type="text/javascript" src="/assets/scripts/project.min.js"></script>
+<script type="text/javascript" src="/assets/scripts/create-account.min.js"></script>
+
 </body>
 </html>

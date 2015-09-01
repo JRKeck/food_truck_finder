@@ -1,23 +1,31 @@
-
 $(document).ready(function(){
 
-    console.log('Client stript is loaded');
+    console.log('Client script is loaded');
 
-    getUserInfo();
+    // Check to see if we can get the users info
+    userGetInfo();
 
-
+    $('.user-logout').on('click', function(){
+       userLogout();
+    });
 
     $( window ).resize(function() {
         trucksNearbyHeight();
     });
 });
+function userLogout(){
+    $.ajax({
+        url: "/user/logout",
+        success: function(){
+        }
+    });//End ajax call
+}
 
-function getUserInfo(){
+function userGetInfo(){
     $.ajax({
         url: "/user/profile",
         success: function(data){
-            if(data.username) {
-                $('.user-login').remove();
+            if(data.email) {
                 displayProfile(data);
             }
             else{
@@ -28,7 +36,7 @@ function getUserInfo(){
 }
 
 function displayProfile(user){
-    $('.user-info').html(user.username);
+    $('.user-info').html(user.displayName);
 }
 
 function trucksNearbyHeight(){

@@ -19,8 +19,9 @@ router.get("/getmarkers", function(req,res,next){
     });
 });
 
+
 //Add truck location to db
-router.get('/addlocation', function(req, res, next){
+router.get('/addtrucklocation', function(req, res, next){
     console.log('location add attempt');
     var mapMarker = new MapMarker(
         {

@@ -24,11 +24,21 @@ gulp.task('sass', function() {
         .pipe(livereload());
 });
 
-// Concatenate & Minify JS
-gulp.task('scripts', function() {
-    return gulp.src('client/scripts/*.js')
+// Concatenate & Minify Index View JS
+gulp.task('scripts-index', function() {
+    return gulp.src(['client/scripts/index.js','client/scripts/project_mapbox.js','client/scripts/user_auth.js'])
         .pipe(concat('all.js'))
         .pipe(rename('project.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('server/public/assets/scripts'))
+        .pipe(livereload());
+});
+
+// Concatenate & Minify Login/Register View JS
+gulp.task('scripts-create', function() {
+    return gulp.src(['client/scripts/login_register.js'])
+        .pipe(concat('all.js'))
+        .pipe(rename('create-account.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('server/public/assets/scripts'))
         .pipe(livereload());
@@ -59,11 +69,11 @@ gulp.task('copy-vendors', function() {
 // Watch Files For Changes
 gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch('client/scripts/*.js', ['lint', 'scripts']);
+    gulp.watch('client/scripts/*.js', ['lint', 'scripts-index', 'scripts-create']);
     gulp.watch('client/styles/*.scss', ['sass']);
     gulp.watch('client/views/*.html', ['views']);
 });
 
 // Default Task
-gulp.task('default', ['lint', 'sass', 'scripts', 'views', 'images', 'copy-vendors', 'watch']);
+gulp.task('default', ['lint', 'sass', 'scripts-index', 'scripts-create', 'views', 'images', 'copy-vendors', 'watch']);
 
