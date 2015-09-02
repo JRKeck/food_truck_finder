@@ -1,7 +1,12 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
+    autoIncrement = require('mongoose-auto-increment');
     bcrypt = require('bcrypt'),
     SALT_WORK_FACTOR = 10;
+
+var connection = mongoose.createConnection("mongodb://joshrkeck:Iu8DhkAFS2pl@ds035723.mongolab.com:35723/food_truck_finder_app");
+
+autoIncrement.initialize(connection);
 
 var UserSchema = new Schema({
     email: { type: String, required: true, index: { unique: true } },
@@ -37,5 +42,5 @@ UserSchema.methods.comparePassword = function(candidatePassword, cb) {
         cb(null, isMatch);
     });
 };
-
+UserSchema.plugin(autoIncrement.plugin, { model: 'User', field: 'userId', startAt: 100, incrementBy: 1 });
 module.exports = mongoose.model('User', UserSchema);
