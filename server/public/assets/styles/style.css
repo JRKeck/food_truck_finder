@@ -22,6 +22,9 @@ body {
     padding: 50px 0 0 0;
     margin: 0;
     height: 100%; }
+    #wrap .center-container .checkin {
+      height: 100%;
+      position: relative; }
 
 header {
   position: fixed;
@@ -62,8 +65,13 @@ header {
   display: none; }
 
 /* checkin.scss */
+.checkin .col-center {
+  position: relative;
+  height: 100%; }
+
 .checkin #map {
-  height: 300px; }
+  height: 300px;
+  max-height: 40%; }
 
 /* map-menu.scss */
 .trucks-nearby {

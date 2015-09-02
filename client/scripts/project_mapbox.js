@@ -111,7 +111,7 @@ function populateMap(markerObj){
         locale.setIcon(L.icon({
             iconUrl: '/assets/images/map-markers/marker.png',
             iconSize: [65, 50],
-            iconAnchor: [33,50],
+            iconAnchor: [0,0],
             popupAnchor: [0, -50]
         }));
 

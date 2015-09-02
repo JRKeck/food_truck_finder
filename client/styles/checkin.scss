@@ -1,7 +1,12 @@
 /* checkin.scss */
 
 .checkin{
+  .col-center {
+    position: relative;
+    height: 100%;
+  }
   #map{
    height: 300px;
+    max-height: 40%;
   }
 }

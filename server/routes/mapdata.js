@@ -21,34 +21,32 @@ router.get("/getmarkers", function(req,res,next){
 
 
 //Add truck location to db
-router.get('/addtrucklocation', function(req, res, next){
+router.post('/addtrucklocation', function(req, res, next){
     console.log('location add attempt');
+    console.log(req.body);
     var mapMarker = new MapMarker(
         {
             "truckID" : 200,
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [-93.2638, 44.98]
+                "coordinates": [req.body.addressLng, req.body.addressLat]
             },
             "properties": {
-                "truckName": "Chef Shack",
-                "simpleAddress": "114 E 13th St",
-                "city": "Minneapolis MN",
-                "fullAddress": "114 E 13th St, New York, 10003, New York, United States",
+                "truckName": "Test Location",
+                "simpleAddress": req.body.addressShort,
+                "city": req.body.addressCity,
+                "fullAddress": req.body.addressFull,
                 "closeTime": "2012-03-08T12:17:24.000Z"
             }
         }
     );
     mapMarker.save(function(err){
         if(err) console.log('Post Error', err);
-        res.send(mapMarker);
+        res.send("location added");
     });
 });
 
-router.get('/*', function(req, res, next){
-    res.redirect('/');
-});
 
 
 module.exports = router;
