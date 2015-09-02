@@ -31,11 +31,11 @@ var mongoURI = "mongodb://joshrkeck:Iu8DhkAFS2pl@ds035723.mongolab.com:35723/foo
 var MongoDB = mongoose.connect(mongoURI).connection;
 
 MongoDB.on('error', function (err) {
-    console.log('mongodb connection error', err);
+    console.log('mongolab connection error', err);
 });
 
 MongoDB.once('open', function () {
-    console.log('mongodb connection open');
+    console.log('mongolab connection open');
 });
 
 // Server setup
