@@ -8,8 +8,10 @@
   margin-top: $map-menu-margin-top;
   margin-right: $map-menu-margin-right;
   background-color: $color-mainbg;
+  font-weight: 100;
+  letter-spacing: .5px;
   @include border-radius(5px);
-  @include box-shadow(0, -0px, 10px, rgba(0,0,0,0.2), $inset: false);
+  @include box-shadow(0, -0px, 10px, rgba(0,0,0,0.4), $inset: false);
   @media (min-width: $breakpoint-map-menu) {
     top: 0;
     bottom: inherit;
@@ -24,6 +26,8 @@
       background-color: $color-toolbar;
       color: $color-accent-white;
       padding: 8px;
+      text-transform: uppercase;
+      font-weight: 100;
     }
   }
   .truck-listing {
@@ -33,10 +37,15 @@
   .truck {
     padding: 10px;
     border-bottom: 1px solid $color-accent-mainbg;
+    &:hover{
+      background-color: lighten( $color-mainbg, 5% )
+    }
     h3 {
       font-size: 16px;
       margin: 0;
       color: $color-accent-white;
+      text-transform: uppercase;
+      font-weight: 100;
     }
     .address, .city{
       color: $color-white-subtle;

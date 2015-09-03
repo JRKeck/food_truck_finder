@@ -6,7 +6,7 @@ header {
   background-color: $color-accent;
   color: $color-white;
   z-index: 2;
-  @include box-shadow(0, 5px, 10px, rgba(0,0,0,0.2), $inset: false);
+  @include box-shadow(0, 5px, 10px, rgba(0,0,0,0.3), $inset: false);
   a {
     color: $color-white;
     &:hover{

@@ -8,7 +8,8 @@ body {
   /* The html and body elements cannot have any padding or margin. */
   padding: 0;
   margin: 0;
-  background-color: #1A3442; }
+  background-color: #1A3442;
+  font-family: "Lato", sans-serif; }
 
 .col-center {
   float: none;
@@ -58,10 +59,9 @@ header {
   background-color: #E5574E;
   color: #fff;
   z-index: 2;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
-
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); }
   header a {
     color: #fff; }
     header a:hover {
@@ -118,18 +118,19 @@ header {
   margin-top: 40px;
   margin-right: 50px;
   background-color: #1A3442;
+  font-weight: 100;
+  letter-spacing: .5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px;
   background-clip: padding-box;
-  -webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.4);
   /* Scroll Bar */
   /* Scroll Bar Track */
   /* Scroll Bar Handle */ }
-
   @media (min-width: 825px) {
     .trucks-nearby {
       top: 0;
@@ -143,19 +144,24 @@ header {
       margin: 0;
       background-color: #0A232D;
       color: #E1E6E8;
-      padding: 8px; }
+      padding: 8px;
+      text-transform: uppercase;
+      font-weight: 100; }
   .trucks-nearby .truck-listing {
     overflow-y: scroll; }
   .trucks-nearby .truck {
     padding: 10px;
     border-bottom: 1px solid #48545D; }
+    .trucks-nearby .truck:hover {
+      background-color: #214254; }
     .trucks-nearby .truck h3 {
       font-size: 16px;
       margin: 0;
-      color: #E1E6E8; }
+      color: #E1E6E8;
+      text-transform: uppercase;
+      font-weight: 100; }
     .trucks-nearby .truck .address, .trucks-nearby .truck .city {
       color: #8FA5AB; }
-
   .trucks-nearby .trucks-nearby-footer {
     height: 0px;
     display: none;
@@ -207,7 +213,6 @@ footer {
     position: absolute;
     height: 100%;
     width: 100%;
-    -webkit-box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2); }
-
+    -webkit-box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3); }

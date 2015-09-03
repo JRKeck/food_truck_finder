@@ -9,15 +9,18 @@ $color-toolbar: #0A232D;
 
 $color-white: #fff;
 $color-accent-white: #E1E6E8;
-<<<<<<< HEAD
 $color-white-subtle: #8FA5AB;
-=======
 
->>>>>>> 42c73a84680017adf0a58d01ea7568cf62510b7f
+//Fonts
+$font-sans-serif: 'Lato', sans-serif;
 
+$font-body: $font-sans-serif;
+$font-headings: $font-sans-serif;
 
+//Breakpoints
 $breakpoint-map-menu: 825px;
 
+//Heights
 $header-height : 50px;
 $footer-height : 70px;
 
