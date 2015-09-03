@@ -26,14 +26,14 @@ router.post('/addtrucklocation', function(req, res, next){
     console.log(req.body);
     var mapMarker = new MapMarker(
         {
-            "truckID" : 200,
+            "userID" : req.user.userID,
             "type": "Feature",
             "geometry": {
                 "type": "Point",
                 "coordinates": [req.body.addressLng, req.body.addressLat]
             },
             "properties": {
-                "truckName": "Test Location",
+                "truckName": req.user.displayName,
                 "simpleAddress": req.body.addressShort,
                 "city": req.body.addressCity,
                 "fullAddress": req.body.addressFull,

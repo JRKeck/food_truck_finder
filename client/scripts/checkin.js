@@ -1,4 +1,5 @@
-var checkinObj = {}; // Holds users location data
+var checkinObj = {}; // Holds users & location data to send in checkin POST
+
 function getCheckinLocation(){
     console.log("geolocating");
     if (!navigator.geolocation) {
@@ -70,6 +71,16 @@ function submitCheckinData(){
     });//End ajax call
 
 }
+
+function checkinMapHeight(){
+    // Get height of parent div
+    var mapHeight = $('.checkin-map-container').innerHeight();
+    var headerHeight = $('.checkin-map-container h2').outerHeight();
+    // set map Height
+    mapHeight = mapHeight - headerHeight;
+    $('#map').css('height', mapHeight+'px');
+}
+
 //Establish map api
 L.mapbox.accessToken = mapboxToken;
 //Call specific Map
@@ -83,5 +94,10 @@ $(document).ready(function() {
     $('body').on('click', '.send-location', function(){
         console.log('click event');
         submitCheckinData();
+    });
+    checkinMapHeight();
+
+    $( window ).resize(function() {
+        checkinMapHeight();
     });
 });

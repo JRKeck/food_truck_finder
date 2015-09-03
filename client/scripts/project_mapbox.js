@@ -22,7 +22,7 @@ function geolocateUser(){
     map.locate();
 
     //Create a map layer to which a client location marker can be added
-    var clientLocLayer = L.mapbox.featureLayer().addTo(map);
+    //var clientLocLayer = L.mapbox.featureLayer().addTo(map);
 
     // Once we've got a position, zoom and center the map
     // on it, and add a single marker.
@@ -30,18 +30,18 @@ function geolocateUser(){
         console.log('location found');
         map.setView([e.latlng.lat, e.latlng.lng], 14);
 
-        clientLocLayer.setGeoJSON({
-            type: 'Feature',
-            geometry: {
-                type: 'Point',
-                coordinates: [e.latlng.lng, e.latlng.lat]
-            },
-            properties: {
-                'title': 'Here I am!',
-                'marker-color': '#04A195',
-                'marker-symbol': 'rocket'
-            }
-        });
+        //clientLocLayer.setGeoJSON({
+        //    type: 'Feature',
+        //    geometry: {
+        //        type: 'Point',
+        //        coordinates: [e.latlng.lng, e.latlng.lat]
+        //    },
+        //    properties: {
+        //        'title': 'Here I am!',
+        //        'marker-color': '#04A195',
+        //        'marker-symbol': 'rocket'
+        //    }
+        //});
     });
     map.on('locationerror', function() {
         console.log('Position could not be found');
@@ -99,7 +99,7 @@ function populateMap(markerObj){
         // Marker interaction
         locale.on('click', function(e) {
             // Center the map on the selected marker.
-            map.panTo(locale.getLatLng());
+            map.panTo(locale.getLatLng(), 16);
 
             // Set active the markers associated listing.
             setActive(listing);
@@ -110,8 +110,8 @@ function populateMap(markerObj){
 
         locale.setIcon(L.icon({
             iconUrl: '/assets/images/map-markers/marker.png',
-            iconSize: [65, 50],
-            iconAnchor: [0,0],
+            iconSize: [66, 50],
+            iconAnchor: [33,50],
             popupAnchor: [0, -50]
         }));
 

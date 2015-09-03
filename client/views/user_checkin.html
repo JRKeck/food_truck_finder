@@ -16,20 +16,34 @@
 
     <!-- Fixed navbar -->
     <header>
-        Food Truck Finder
+        <a href="/">Food Truck Finder</a>
+        <div class="user">
+            <div class="user-login">
+                <a href="/login">Sign In</a>
+            </div>
+            <div class="user-info">
+
+            </div>
+        </div>
     </header>
     <!-- Begin page content -->
     <div class="center-container">
         <div class="container-fluid content-container checkin">
             <div class="col-center col-sm-6">
-                <div id="map">
-
-                </div>
-                <div class="checkin-info">
-                    <h2>Confirm Location</h2>
-                    <div class="address"></div>
-                    <button class="send-location">Submit Location</button>
-                </div>
+                    <div class="checkin-top col-xs-12">
+                        <div class="checkin-map-container">
+                            <h2>Add Food Truck</h2>
+                            <div id="map">
+                                <!--Mapbox targets map id to place map-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkin-bottom col-xs-12">
+                        <div class="address">1234 5th street</div>
+                        <div class="checkin-btn">
+                            <button class="send-location btn">Submit Location</button>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>

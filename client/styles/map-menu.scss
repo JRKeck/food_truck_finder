@@ -7,7 +7,7 @@
   bottom: 0;
   margin-top: $map-menu-margin-top;
   margin-right: $map-menu-margin-right;
-  background-color: #fff;
+  background-color: $color-mainbg;
   @media (min-width: $breakpoint-map-menu) {
     top: 0;
     bottom: inherit;
@@ -15,9 +15,13 @@
     width: 250px;
   }
   .trucks-nearby-header{
+    border-bottom: 1px solid $color-accent-mainbg;
     h2 {
       font-size: 20px;
       margin: 0;
+      background-color: $color-toolbar;
+      color: $color-accent-white;
+      padding: 8px;
     }
   }
   .truck-listing {
@@ -25,16 +29,23 @@
   }
   .truck {
     padding: 10px;
+    border-bottom: 1px solid $color-accent-mainbg;
     h3 {
       font-size: 16px;
       margin: 0;
+      color: $color-accent-white;
+    }
+    .address, .city{
+      color: $color-primary;
     }
   }
   .trucks-nearby-footer{
     height: 0px;
     display: none;
+    background-color: $color-toolbar;
+    border-top: 1px solid $color-accent-mainbg;
     @media (min-width: $breakpoint-map-menu){
-      height: auto;
+      height: 10px;
       display: block;
     }
   }

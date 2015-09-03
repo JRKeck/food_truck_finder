@@ -49,7 +49,7 @@ gulp.task('scripts-user-checkin', function() {
     return gulp.src(['client/scripts/master_functions.js','client/scripts/checkin.js'])
         .pipe(concat('all.js'))
         .pipe(rename('truck-checkin.min.js'))
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest('server/public/assets/scripts'))
         .pipe(livereload());
 });
@@ -79,7 +79,7 @@ gulp.task('copy-vendors', function() {
 // Watch Files For Changes
 gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch('client/scripts/*.js', ['lint', 'scripts-user-auth', 'scripts-user-checkin']);
+    gulp.watch('client/scripts/*.js', ['lint', 'scripts-index', 'scripts-user-auth', 'scripts-user-checkin']);
     gulp.watch('client/styles/*.scss', ['sass']);
     gulp.watch('client/views/*.html', ['views']);
 });

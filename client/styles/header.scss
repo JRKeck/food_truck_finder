@@ -3,6 +3,14 @@
 header {
   padding: 10px;
   height: $header-height;
+  background-color: $color-accent;
+  color: $color-white;
+  a {
+    color: $color-white;
+    &:hover{
+      color: $color-primary;
+    }
+  }
   .user {
     float: right;
     .user-login {

@@ -7,7 +7,7 @@ var mongoose = require('mongoose'),
 //});
 
 var MapMarkerSchema = new Schema({
-    "truckID" : Number,
+    "userID" : Number,
     "type": {type: String, default: "Feature" },
     "geometry": {
         "type": {type: String, default: "Point" },

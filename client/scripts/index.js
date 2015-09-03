@@ -1,14 +1,5 @@
 $(document).ready(function(){
 
-    console.log('Client script is loaded');
-
-    // Check to see if we can get the users info
-    userGetInfo();
-
-    $('.user-logout').on('click', function(){
-       userLogout();
-    });
-
     $( window ).resize(function() {
         trucksNearbyHeight();
     });
