@@ -42,5 +42,5 @@ UserSchema.methods.comparePassword = function(candidatePassword, cb) {
         cb(null, isMatch);
     });
 };
-UserSchema.plugin(autoIncrement.plugin, { model: 'User', field: 'userId', startAt: 100, incrementBy: 1 });
+UserSchema.plugin(autoIncrement.plugin, { model: 'User', field: 'userID', startAt: 100, incrementBy: 1 });
 module.exports = mongoose.model('User', UserSchema);
