@@ -14,8 +14,12 @@
     "body-parser": "^1.13.3",
     "express": "^4.13.3",
     "express-session": "^1.11.3",
+<<<<<<< HEAD
     "mongoose": "~4.0.0",
     "mongoose-auto-increment": "^4.0.0",
+=======
+    "mongoose": "^4.1.3",
+>>>>>>> 42c73a84680017adf0a58d01ea7568cf62510b7f
     "passport": "^0.3.0",
     "passport-local": "^1.0.0",
     "path": "^0.11.14"

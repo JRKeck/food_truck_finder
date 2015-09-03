@@ -61,6 +61,7 @@ header {
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+
   header a {
     color: #fff; }
     header a:hover {
@@ -128,6 +129,7 @@ header {
   /* Scroll Bar */
   /* Scroll Bar Track */
   /* Scroll Bar Handle */ }
+
   @media (min-width: 825px) {
     .trucks-nearby {
       top: 0;
@@ -153,6 +155,7 @@ header {
       color: #E1E6E8; }
     .trucks-nearby .truck .address, .trucks-nearby .truck .city {
       color: #8FA5AB; }
+
   .trucks-nearby .trucks-nearby-footer {
     height: 0px;
     display: none;
@@ -207,3 +210,4 @@ footer {
     -webkit-box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
     box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2); }
+
