@@ -8,6 +8,8 @@
   margin-top: $map-menu-margin-top;
   margin-right: $map-menu-margin-right;
   background-color: $color-mainbg;
+  @include border-radius(5px);
+  @include box-shadow(0, -0px, 10px, rgba(0,0,0,0.2), $inset: false);
   @media (min-width: $breakpoint-map-menu) {
     top: 0;
     bottom: inherit;
@@ -26,6 +28,7 @@
   }
   .truck-listing {
     overflow-y: scroll;
+
   }
   .truck {
     padding: 10px;
@@ -36,7 +39,7 @@
       color: $color-accent-white;
     }
     .address, .city{
-      color: $color-primary;
+      color: $color-white-subtle;
     }
   }
   .trucks-nearby-footer{
@@ -45,8 +48,27 @@
     background-color: $color-toolbar;
     border-top: 1px solid $color-accent-mainbg;
     @media (min-width: $breakpoint-map-menu){
-      height: 10px;
+      height: 20px;
       display: block;
     }
+  }
+  /* Scroll Bar */
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  /* Scroll Bar Track */
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  /* Scroll Bar Handle */
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: 10px;
+    background: $color-accent;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
   }
 }

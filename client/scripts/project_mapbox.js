@@ -71,7 +71,7 @@ function populateMap(markerObj){
         var prop = locale.feature.properties;
 
         // For each marker on the map set pop up and list infoE
-        var popup = '<h3>'+prop.truckName+'</h3><div>' + prop.simpleAddress;
+        var popup = '<h3>'+prop.truckName+'</h3><div class="info">' + prop.simpleAddress;
 
         var listing = listings.appendChild(document.createElement('div'));
         listing.className = 'truck';
