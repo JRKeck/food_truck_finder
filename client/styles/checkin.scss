@@ -11,7 +11,7 @@
     color: $color-white;
     background-color: $color-primary;
     padding-bottom: 20px;
-    @include border-top-radius(10px);
+    @include border-top-radius(5px);
     h2 {
       margin: 0;
       font-size: 18px;
@@ -26,7 +26,7 @@
   }
   .checkin-bottom {
     background-color: $color-white;
-    @include border-bottom-radius(10px);
+    @include border-bottom-radius(5px);
     
   }
 
