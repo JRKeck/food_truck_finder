@@ -177,7 +177,8 @@ header {
       text-transform: uppercase;
       font-weight: 100; }
   .trucks-nearby .truck-listing {
-    overflow-y: scroll; }
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; }
   .trucks-nearby .truck {
     padding: 10px 10px 10px 30px;
     border-bottom: 1px solid #48545D; }

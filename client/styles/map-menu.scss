@@ -48,7 +48,7 @@
   }
   .truck-listing {
     overflow-y: scroll;
-
+    -webkit-overflow-scrolling: touch;
   }
   .truck {
     padding: 10px 10px 10px 30px;
