@@ -129,7 +129,7 @@ header {
 .trucks-nearby {
   overflow: hidden;
   width: 100%;
-  top: 100%;
+  top: 45%;
   bottom: 0;
   margin-top: 40px;
   margin-right: 50px;
@@ -143,8 +143,8 @@ header {
   /* Scroll Bar */
   /* Scroll Bar Track */
   /* Scroll Bar Handle */ }
-  .trucks-nearby.active {
-    top: 45%; }
+  .trucks-nearby.hide {
+    top: 100%; }
   @media (min-width: 825px) {
     .trucks-nearby {
       top: 0;

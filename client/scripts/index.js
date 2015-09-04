@@ -5,11 +5,11 @@ $(document).ready(function(){
     });
     // Toggle the map-menu on mobile
     $('body').on('click', '.menu-close', function(){
-        $('.trucks-nearby').removeClass('active');
+        $('.trucks-nearby').removeClass('hide');
     });
     // Close the map menu
     $('body').on('click', '.footer-nav .map-list', function(){
-        $('.trucks-nearby').toggleClass('active');
+        $('.trucks-nearby').toggleClass('hide');
     })
 
 });
