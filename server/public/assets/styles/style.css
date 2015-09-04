@@ -69,7 +69,23 @@ header {
   header .user {
     float: right; }
     header .user .user-login {
-      display: none; }
+      display: none;
+      margin-top: 2px; }
+      header .user .user-login a {
+        border: 1px solid #fff;
+        font-size: 18px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        border-radius: 5px;
+        background-clip: padding-box;
+        padding: 5px 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px; }
+        header .user .user-login a:hover {
+          background-color: #fff;
+          color: #E5574E;
+          text-decoration: none; }
 
 /* login-register.scss */
 .register .register-user {

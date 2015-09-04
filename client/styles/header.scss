@@ -17,6 +17,20 @@ header {
     float: right;
     .user-login {
       display: none;
+      margin-top: 2px;
+      a {
+        border: 1px solid $color-white;
+        font-size: 18px;
+        @include border-radius(5px);
+        padding: 5px 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        &:hover{
+          background-color: $color-white;
+          color: $color-accent;
+          text-decoration: none;
+        }
+      }
     }
   }
 }
