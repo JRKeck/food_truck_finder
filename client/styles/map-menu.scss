@@ -22,6 +22,9 @@
     width: 250px;
     @include border-radius(5px);
     transition: none;
+    &.active{
+      top: 0;
+    }
   }
   .trucks-nearby-header{
     border-bottom: 1px solid $color-accent-mainbg;

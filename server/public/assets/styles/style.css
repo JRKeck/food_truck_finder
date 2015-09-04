@@ -156,7 +156,9 @@ header {
       -ms-border-radius: 5px;
       border-radius: 5px;
       background-clip: padding-box;
-      transition: none; } }
+      transition: none; }
+      .trucks-nearby.active {
+        top: 0; } }
   .trucks-nearby .trucks-nearby-header {
     border-bottom: 1px solid #48545D; }
     .trucks-nearby .trucks-nearby-header .menu-close {
