@@ -201,9 +201,17 @@ header {
       margin: 0;
       color: #E1E6E8;
       text-transform: uppercase;
-      font-weight: 100; }
+      font-weight: 400; }
+      @media (min-width: 825px) {
+        .trucks-nearby .truck h3 {
+          font-weight: 100; } }
     .trucks-nearby .truck .address, .trucks-nearby .truck .city {
-      color: #8FA5AB; }
+      color: #acbcc1;
+      font-weight: 400; }
+      @media (min-width: 825px) {
+        .trucks-nearby .truck .address, .trucks-nearby .truck .city {
+          color: #8FA5AB;
+          font-weight: 100; } }
   .trucks-nearby .trucks-nearby-footer {
     height: 0px;
     display: none;
