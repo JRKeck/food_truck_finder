@@ -13,6 +13,16 @@ header {
       color: $color-primary;
     }
   }
+  .logo {
+    float: left;
+    font-size: 18px;
+    a{
+      &:hover{
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
   .user {
     float: right;
     .user-login {
@@ -25,6 +35,7 @@ header {
         padding: 5px 20px;
         text-transform: uppercase;
         letter-spacing: 1px;
+        transition: all 0.3s ease 0s;
         &:hover{
           background-color: $color-white;
           color: $color-accent;

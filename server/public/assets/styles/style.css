@@ -66,6 +66,12 @@ header {
     color: #fff; }
     header a:hover {
       color: #23ACD1; }
+  header .logo {
+    float: left;
+    font-size: 18px; }
+    header .logo a:hover {
+      text-decoration: none;
+      color: inherit; }
   header .user {
     float: right; }
     header .user .user-login {
@@ -81,7 +87,8 @@ header {
         background-clip: padding-box;
         padding: 5px 20px;
         text-transform: uppercase;
-        letter-spacing: 1px; }
+        letter-spacing: 1px;
+        transition: all 0.3s ease 0s; }
         header .user .user-login a:hover {
           background-color: #fff;
           color: #E5574E;
