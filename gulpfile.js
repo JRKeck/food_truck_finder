@@ -16,7 +16,7 @@ gulp.task('lint', function() {
         .pipe(jshint.reporter('default'));
 });
 
-// Compile Our Sass
+// Compile Sass
 gulp.task('sass', function() {
     return gulp.src('client/styles/style.scss')
         .pipe(sass())
@@ -44,7 +44,7 @@ gulp.task('scripts-user-auth', function() {
         .pipe(livereload());
 });
 
-// Concatenate & Minify Login/Register View JS
+// Concatenate & Minify Checkin View JS
 gulp.task('scripts-user-checkin', function() {
     return gulp.src(['client/scripts/master_functions.js','client/scripts/checkin.js'])
         .pipe(concat('all.js'))
@@ -74,6 +74,10 @@ gulp.task('copy-vendors', function() {
         .pipe(gulp.dest('server/public/vendors/bootstrap'));
     gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/jquery/dist/jquery.min.map'])
         .pipe(gulp.dest('server/public/vendors/jquery'));
+    gulp.src(['node_modules/font-awesome/css/font-awesome.min.css', 'node_modules/font-awesome/css/font-awesome.css.map'])
+        .pipe(gulp.dest('server/public/vendors/font-awesome/css'));
+    gulp.src(['node_modules/font-awesome/fonts/*'])
+        .pipe(gulp.dest('server/public/vendors/font-awesome/fonts'));
 });
 
 // Watch Files For Changes
