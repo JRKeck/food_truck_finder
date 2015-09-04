@@ -120,11 +120,6 @@ header {
   background-color: #1A3442;
   font-weight: 100;
   letter-spacing: .5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px;
-  background-clip: padding-box;
   -webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.4);
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.4);
@@ -136,7 +131,12 @@ header {
       top: 0;
       bottom: inherit;
       right: 0;
-      width: 250px; } }
+      width: 250px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px;
+      background-clip: padding-box; } }
   .trucks-nearby .trucks-nearby-header {
     border-bottom: 1px solid #48545D; }
     .trucks-nearby .trucks-nearby-header h2 {
@@ -150,8 +150,11 @@ header {
   .trucks-nearby .truck-listing {
     overflow-y: scroll; }
   .trucks-nearby .truck {
-    padding: 10px;
+    padding: 10px 10px 10px 30px;
     border-bottom: 1px solid #48545D; }
+    @media (min-width: 825px) {
+      .trucks-nearby .truck {
+        padding: 10px 10px 10px 20px; } }
     .trucks-nearby .truck:hover {
       background-color: #214254; }
     .trucks-nearby .truck h3 {
@@ -184,6 +187,9 @@ header {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
 
 /* map-markers.scss */
+.leaflet-container {
+  font: 12px/20px "Lato", sans-serif; }
+
 .leaflet-popup-content-wrapper {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -194,10 +200,16 @@ header {
 .leaflet-popup-close-button + .leaflet-popup-content-wrapper .leaflet-popup-content {
   padding-top: 0px; }
 
+a.leaflet-popup-close-button {
+  text-indent: 0;
+  background: none;
+  color: #fff; }
+
 .leaflet-popup-content {
   padding: 0; }
   .leaflet-popup-content h3 {
     padding: 10px 20px;
+    background-color: #1A3442;
     color: #fff;
     margin-bottom: 0; }
   .leaflet-popup-content .info {

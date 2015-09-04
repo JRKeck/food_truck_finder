@@ -1,4 +1,7 @@
 /* map-markers.scss */
+.leaflet-container{
+  font: 12px/20px $font-body;
+}
 .leaflet-popup-content-wrapper{
   @include border-radius(5px);
 }
@@ -6,11 +9,16 @@
 .leaflet-popup-close-button+.leaflet-popup-content-wrapper .leaflet-popup-content{
   padding-top: 0px;
 }
+a.leaflet-popup-close-button{
+  text-indent: 0;
+  background: none;
+  color: $color-white;
+}
 .leaflet-popup-content {
   padding: 0;
   h3 {
     padding: 10px 20px;
-    //background-color: $color-mainbg;
+    background-color: $color-mainbg;
     color: $color-white;
     margin-bottom: 0;
   }

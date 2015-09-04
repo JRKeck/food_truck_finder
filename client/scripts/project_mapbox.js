@@ -82,7 +82,7 @@ function populateMap(markerObj){
 
         link.innerHTML = "<h3>"+  prop.truckName + "</h3>";
         link.innerHTML += "<div class='address'>"+prop.simpleAddress+"</div>";
-        link.innerHTML += "<div class='city'>"+prop.city+"</div>";
+        link.innerHTML += "<div class='city'>"+prop.city+"</div></div>";
 
 
         // List item click behavior

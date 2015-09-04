@@ -35,8 +35,11 @@
 
   }
   .truck {
-    padding: 10px;
+    padding: 10px 10px 10px 30px;
     border-bottom: 1px solid $color-accent-mainbg;
+    @media (min-width: $breakpoint-map-menu){
+      padding: 10px 10px 10px 20px;
+    }
     &:hover{
       background-color: lighten( $color-mainbg, 5% )
     }
