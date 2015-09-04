@@ -30,6 +30,7 @@
       color: $color-white;
       i.material-icons{
         margin: 6px;
+        cursor: pointer;
       }
       @media (min-width: $breakpoint-map-menu){
         display: none;

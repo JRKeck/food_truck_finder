@@ -163,7 +163,8 @@ header {
       float: right;
       color: #fff; }
       .trucks-nearby .trucks-nearby-header .menu-close i.material-icons {
-        margin: 6px; }
+        margin: 6px;
+        cursor: pointer; }
       @media (min-width: 825px) {
         .trucks-nearby .trucks-nearby-header .menu-close {
           display: none; } }
@@ -258,4 +259,5 @@ footer {
     box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3); }
     footer .footer-nav .nav-item {
       display: inline-block;
-      padding: 10px; }
+      padding: 10px;
+      cursor: pointer; }
