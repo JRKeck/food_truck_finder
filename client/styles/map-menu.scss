@@ -3,7 +3,7 @@
 .trucks-nearby {
   overflow: hidden;
   width: 100%;
-  top: 45%;
+  top: 100%;
   bottom: 0;
   margin-top: $map-menu-margin-top;
   margin-right: $map-menu-margin-right;
@@ -11,8 +11,8 @@
   font-weight: 100;
   letter-spacing: .5px;
   transition: top 0.6s ease 0s;
-  &.hide{
-    top: 100%;
+  &.active{
+    top: 45%;
   }
   @include box-shadow(0, -0px, 10px, rgba(0,0,0,0.4), $inset: false);
   @media (min-width: $breakpoint-map-menu) {
