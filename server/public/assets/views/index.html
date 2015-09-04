@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--STYLES-->
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/vendors/bootstrap/bootstrap.min.css">
     <!--<link rel="stylesheet" href="/vendors/font-awesome/css/font-awesome.min.css">-->
     <link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet'/>
@@ -31,7 +32,11 @@
         <div class="map-container">
                 <div class="trucks-nearby">
                     <div class="trucks-nearby-header">
+                        <div class="menu-close">
+                            <i class="material-icons">&#xE888;</i>
+                        </div>
                         <h2>Food Trucks Nearby</h2>
+
                     </div>
                     <div id="listings" class="truck-listing">
                         <!--Truck listings will populate from DB here-->
@@ -46,9 +51,10 @@
     </div>
 </div>
 <footer>
-    <div class="shadow-fix">
-        Footer
-        <a href="add-truck-location">Checkin</a>
+    <div class="footer-nav">
+        <div class="nav-item map-checkin"><a href="add-truck-location">Checkin</a></div>
+        <div class="nav-item map-list">Show List</div>
+
     </div>
 </footer>
 <!--Scripts-->

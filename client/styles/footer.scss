@@ -6,10 +6,14 @@ footer {
   color: $color-white;
   position: relative;
 
-  .shadow-fix{
+  .footer-nav{
     position: absolute;
     height: 100%;
     width: 100%;
     @include box-shadow(0, -5px, 10px, rgba(0,0,0,0.3), $inset: false);
+    .nav-item{
+      display: inline-block;
+      padding: 10px;
+    }
   }
 }

@@ -3,6 +3,15 @@ $(document).ready(function(){
     $( window ).resize(function() {
         trucksNearbyHeight();
     });
+    // Toggle the map-menu on mobile
+    $('body').on('click', '.menu-close', function(){
+        $('.trucks-nearby').removeClass('active');
+    });
+    // Close the map menu
+    $('body').on('click', '.footer-nav .map-list', function(){
+        $('.trucks-nearby').toggleClass('active');
+    })
+
 });
 
 function trucksNearbyHeight(){

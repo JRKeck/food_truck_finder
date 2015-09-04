@@ -3,13 +3,17 @@
 .trucks-nearby {
   overflow: hidden;
   width: 100%;
-  top: 45%;
+  top: 100%;
   bottom: 0;
   margin-top: $map-menu-margin-top;
   margin-right: $map-menu-margin-right;
   background-color: $color-mainbg;
   font-weight: 100;
   letter-spacing: .5px;
+  transition: top 0.6s ease 0s;
+  &.active{
+    top: 45%;
+  }
   @include box-shadow(0, -0px, 10px, rgba(0,0,0,0.4), $inset: false);
   @media (min-width: $breakpoint-map-menu) {
     top: 0;
@@ -17,9 +21,20 @@
     right: 0;
     width: 250px;
     @include border-radius(5px);
+    transition: none;
   }
   .trucks-nearby-header{
     border-bottom: 1px solid $color-accent-mainbg;
+    .menu-close {
+      float: right;
+      color: $color-white;
+      i.material-icons{
+        margin: 6px;
+      }
+      @media (min-width: $breakpoint-map-menu){
+        display: none;
+      }
+    }
     h2 {
       font-size: 20px;
       margin: 0;

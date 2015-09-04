@@ -74,10 +74,6 @@ gulp.task('copy-vendors', function() {
         .pipe(gulp.dest('server/public/vendors/bootstrap'));
     gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/jquery/dist/jquery.min.map'])
         .pipe(gulp.dest('server/public/vendors/jquery'));
-    gulp.src(['node_modules/font-awesome/css/font-awesome.min.css', 'node_modules/font-awesome/css/font-awesome.css.map'])
-        .pipe(gulp.dest('server/public/vendors/font-awesome/css'));
-    gulp.src(['node_modules/font-awesome/fonts/*'])
-        .pipe(gulp.dest('server/public/vendors/font-awesome/fonts'));
 });
 
 // Watch Files For Changes
