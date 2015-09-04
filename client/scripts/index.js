@@ -5,7 +5,7 @@ $(document).ready(function(){
     });
     // Toggle the map-menu on mobile
     $('body').on('click', '.menu-close', function(){
-        $('.trucks-nearby').removeClass('hide');
+        $('.trucks-nearby').addClass('hide');
     });
     // Close the map menu
     $('body').on('click', '.footer-nav .map-list', function(){
