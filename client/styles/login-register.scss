@@ -1,9 +1,37 @@
 /* login-register.scss */
 
+.card {
+  background-color: $card-bg-color;
+  @include border-radius($card-border-radius);
+  margin-top: $card-margin-top;
+  padding: 20px;
+
+  h1{
+    margin: 0;
+    padding-bottom: 20px;
+  }
+  form{
+    input{
+      width: 100%;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    input[type="password"],input[type="text"]{
+
+      font-weight: 100;
+      padding: 5px;
+      letter-spacing: 1px;
+      border: none;
+      border-bottom: 1px solid $color-accent-mainbg;
+      &:focus{
+        outline-color: $color-primary;
+      }
+    }
+  }
+}
 .login {
 
 }
-
 .register {
  .register-user{
   display: none;

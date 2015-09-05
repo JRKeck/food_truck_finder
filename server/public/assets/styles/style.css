@@ -95,6 +95,31 @@ header {
           text-decoration: none; }
 
 /* login-register.scss */
+.card {
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  background-clip: padding-box;
+  margin-top: 20px;
+  padding: 20px; }
+  .card h1 {
+    margin: 0;
+    padding-bottom: 20px; }
+  .card form input {
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 20px; }
+  .card form input[type="password"], .card form input[type="text"] {
+    font-weight: 100;
+    padding: 5px;
+    letter-spacing: 1px;
+    border: none;
+    border-bottom: 1px solid #48545D; }
+    .card form input[type="password"]:focus, .card form input[type="text"]:focus {
+      outline-color: #23ACD1; }
+
 .register .register-user {
   display: none; }
 

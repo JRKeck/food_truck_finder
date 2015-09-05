@@ -5,13 +5,13 @@
     height: 100%;
   }
   .checkin-top {
-    margin-top: 20px;
+    margin-top: $card-margin-top;
     height: 300px;
     max-height: 50%;
     color: $color-white;
     background-color: $color-primary;
     padding-bottom: 20px;
-    @include border-top-radius(5px);
+    @include border-top-radius($card-border-radius);
     h2 {
       margin: 0;
       font-size: 18px;
@@ -26,7 +26,7 @@
   }
   .checkin-bottom {
     background-color: $color-white;
-    @include border-bottom-radius(5px);
+    @include border-bottom-radius($card-border-radius);
     
   }
 
