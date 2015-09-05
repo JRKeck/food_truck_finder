@@ -32,6 +32,8 @@ $leaflet-popup-radius: 5px;
       background-color: $color-mainbg;
       color: $color-white;
       margin-bottom: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
       @include border-top-radius($leaflet-popup-radius);
     }
     .info {
