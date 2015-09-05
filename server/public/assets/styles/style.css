@@ -9,7 +9,8 @@ body {
   padding: 0;
   margin: 0;
   background-color: #1A3442;
-  font-family: "Lato", sans-serif; }
+  font-family: "Lato", sans-serif;
+  color: #333; }
 
 .col-center {
   float: none;
@@ -51,6 +52,46 @@ header {
 
 footer {
   height: 70px; }
+
+/* buttons.scss */
+.btn {
+  transition: all 0.3s ease 0s; }
+
+.btn_success {
+  background-color: #23ACD1;
+  color: #fff; }
+  .btn_success:hover {
+    background-color: #1f9abb;
+    color: #fff; }
+
+.btn_info {
+  background-color: transparent;
+  border: 1px solid #23ACD1;
+  color: #23ACD1; }
+  .btn_info:hover {
+    background-color: #23ACD1;
+    color: #fff; }
+
+.separator {
+  text-align: center;
+  font-size: 18px;
+  line-height: .5;
+  margin-bottom: 20px; }
+  .separator span {
+    position: relative;
+    display: inline-block; }
+    .separator span:after {
+      left: 100%;
+      margin-left: 15px; }
+    .separator span:before {
+      right: 100%;
+      margin-right: 15px; }
+    .separator span:before, .separator span:after {
+      content: '';
+      position: absolute;
+      top: 5px;
+      width: 125px;
+      border-bottom: 1px solid #48545D; }
 
 /* header.scss */
 header {
@@ -103,22 +144,28 @@ header {
   border-radius: 5px;
   background-clip: padding-box;
   margin-top: 20px;
-  padding: 20px; }
+  padding: 20px;
+  max-width: 500px; }
   .card h1 {
     margin: 0;
-    padding-bottom: 20px; }
-  .card form input {
-    width: 100%;
-    font-size: 18px;
-    margin-bottom: 20px; }
-  .card form input[type="password"], .card form input[type="text"] {
-    font-weight: 100;
-    padding: 5px;
-    letter-spacing: 1px;
-    border: none;
-    border-bottom: 1px solid #48545D; }
-    .card form input[type="password"]:focus, .card form input[type="text"]:focus {
-      outline-color: #23ACD1; }
+    padding-bottom: 20px;
+    text-transform: uppercase; }
+  .card form {
+    overflow: hidden; }
+    .card form input {
+      width: 100%;
+      font-size: 18px;
+      margin-bottom: 20px; }
+      @media (min-width: 825px) {
+        .card form input {
+          font-weight: 100; } }
+    .card form input[type="password"], .card form input[type="text"] {
+      padding: 5px;
+      letter-spacing: 1px;
+      border: none;
+      border-bottom: 1px solid #48545D; }
+      .card form input[type="password"]:focus, .card form input[type="text"]:focus {
+        outline-color: #23ACD1; }
 
 .register .register-user {
   display: none; }

@@ -1,6 +1,8 @@
 /* variables.scss */
 
 //Colors
+$color-base-txt: #333;
+
 $color-primary: #23ACD1;
 $color-accent: #E5574E;
 $color-mainbg: #1A3442;
@@ -16,6 +18,9 @@ $font-sans-serif: 'Lato', sans-serif;
 
 $font-body: $font-sans-serif;
 $font-headings: $font-sans-serif;
+
+//Transisions
+$transition-btn-all: all 0.3s ease 0s;
 
 //Breakpoints
 $breakpoint-map-menu: 825px;
