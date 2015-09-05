@@ -1,6 +1,29 @@
-/* buttons.scss */
+/* form_and_buttons.scss */
+form{
+  overflow: hidden;
+  input{
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 20px;
+    @media (min-width: $breakpoint-map-menu){
+      font-weight: 100;
+    }
+  }
+  input[type="password"],input[type="text"]{
+    padding: 5px;
+    letter-spacing: 1px;
+    border: none;
+    border-bottom: 1px solid $color-accent-mainbg;
+    &:focus{
+      outline-color: $color-primary;
+    }
+  }
+}
 .btn {
-  transition: $transition-btn-all
+  transition: $transition-btn-all;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 18px;
 }
 .btn_success {
   background-color: $color-primary;
@@ -23,7 +46,7 @@
   text-align: center;
   font-size: 18px;
   line-height: .5;
-  margin-bottom: 20px;
+  margin: 20px 0;
   span {
     position: relative;
     display: inline-block;

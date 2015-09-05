@@ -12,31 +12,14 @@
     padding-bottom: 20px;
     text-transform: uppercase;
   }
-  form{
-    overflow: hidden;
-    input{
-      width: 100%;
-      font-size: 18px;
-      margin-bottom: 20px;
-      @media (min-width: $breakpoint-map-menu){
-        font-weight: 100;
-      }
-    }
-    input[type="password"],input[type="text"]{
-      padding: 5px;
-      letter-spacing: 1px;
-      border: none;
-      border-bottom: 1px solid $color-accent-mainbg;
-      &:focus{
-        outline-color: $color-primary;
-      }
-    }
-  }
 }
 .login {
 
 }
 .register {
+  .btn {
+    width: 100%;
+  }
  .register-user{
   display: none;
  }

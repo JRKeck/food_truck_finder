@@ -10,7 +10,8 @@ body {
   margin: 0;
   background-color: #1A3442;
   font-family: "Lato", sans-serif;
-  color: #333; }
+  color: #333;
+  font-size: 16px; }
 
 .col-center {
   float: none;
@@ -53,9 +54,29 @@ header {
 footer {
   height: 70px; }
 
-/* buttons.scss */
+/* form_and_buttons.scss */
+form {
+  overflow: hidden; }
+  form input {
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 20px; }
+    @media (min-width: 825px) {
+      form input {
+        font-weight: 100; } }
+  form input[type="password"], form input[type="text"] {
+    padding: 5px;
+    letter-spacing: 1px;
+    border: none;
+    border-bottom: 1px solid #48545D; }
+    form input[type="password"]:focus, form input[type="text"]:focus {
+      outline-color: #23ACD1; }
+
 .btn {
-  transition: all 0.3s ease 0s; }
+  transition: all 0.3s ease 0s;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 18px; }
 
 .btn_success {
   background-color: #23ACD1;
@@ -76,7 +97,7 @@ footer {
   text-align: center;
   font-size: 18px;
   line-height: .5;
-  margin-bottom: 20px; }
+  margin: 20px 0; }
   .separator span {
     position: relative;
     display: inline-block; }
@@ -150,22 +171,9 @@ header {
     margin: 0;
     padding-bottom: 20px;
     text-transform: uppercase; }
-  .card form {
-    overflow: hidden; }
-    .card form input {
-      width: 100%;
-      font-size: 18px;
-      margin-bottom: 20px; }
-      @media (min-width: 825px) {
-        .card form input {
-          font-weight: 100; } }
-    .card form input[type="password"], .card form input[type="text"] {
-      padding: 5px;
-      letter-spacing: 1px;
-      border: none;
-      border-bottom: 1px solid #48545D; }
-      .card form input[type="password"]:focus, .card form input[type="text"]:focus {
-        outline-color: #23ACD1; }
+
+.register .btn {
+  width: 100%; }
 
 .register .register-user {
   display: none; }
