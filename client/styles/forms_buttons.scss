@@ -14,6 +14,7 @@ form{
     letter-spacing: 1px;
     border: none;
     border-bottom: 1px solid $color-accent-mainbg;
+    @include border-radius(0px);
     &:focus{
       outline-color: $color-primary;
     }
