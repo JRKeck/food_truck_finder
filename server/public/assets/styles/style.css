@@ -321,7 +321,6 @@ form {
 /* map-markers.scss */
 .map-active {
   position: absolute;
-  z-index: 25;
   top: 0;
   right: 0;
   bottom: 20%;
