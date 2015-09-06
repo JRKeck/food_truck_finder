@@ -290,11 +290,11 @@ form {
       @media (min-width: 825px) {
         .trucks-nearby .truck h3 {
           font-weight: 100; } }
-    .trucks-nearby .truck .address, .trucks-nearby .truck .city {
+    .trucks-nearby .truck .address, .trucks-nearby .truck .city, .trucks-nearby .truck .distance {
       color: #acbcc1;
       font-weight: 400; }
       @media (min-width: 825px) {
-        .trucks-nearby .truck .address, .trucks-nearby .truck .city {
+        .trucks-nearby .truck .address, .trucks-nearby .truck .city, .trucks-nearby .truck .distance {
           color: #8FA5AB;
           font-weight: 100; } }
   .trucks-nearby .trucks-nearby-footer {
