@@ -68,8 +68,6 @@ function populateMap(markerObj){
         var metresToMiles = 0.000621371192;
         var distance = (metresToMiles * currentLoc.distanceTo(marker.getLatLng())).toFixed(1);
 
-        console.log(distance);
-
         // Shorten locale.feature.properties to prop
         var prop = marker.feature.properties;
 
@@ -121,8 +119,7 @@ function populateMap(markerObj){
         }));
 
     });
-    console.log(truckList);
-
+    // Sort the trucks by distance
     truckList.sort(function(a, b) {
         return a.getAttribute('data-distance') - b.getAttribute('data-distance');
     });
@@ -141,7 +138,9 @@ L.mapbox.accessToken = mapboxToken;
 var map = L.mapbox.map('map', 'jrkeck.7fbfb356');
 
 //Set initial map view to Minneapolis
-map.setView([44.98,-93.2638], 14);
+//map.setView([44.98,-93.2638], 14);
+
+map.setActiveArea('map-active').setView([44.98,-93.2638], 14);
 
 // Start with a fixed marker.
 var fixedMarker = L.marker(new L.LatLng(44.95, -93.2638), {});

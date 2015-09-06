@@ -14,7 +14,7 @@ if (typeof previousMethods === 'undefined') {
 L.Map.include({
     getBounds: function() {
         if (this._viewport) {
-            return this.getViewportLatLngBounds()
+            return this.getViewportLatLngBounds();
         } else {
             var bounds = this.getPixelBounds(),
             sw = this.unproject(bounds.getBottomLeft()),
