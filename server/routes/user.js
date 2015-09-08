@@ -30,9 +30,9 @@ router.get('/getprofile', function(req, res, next){
         res.json('Not Sigend In');
     }
 });
-router.get('/logout', function(req, res, next){
+router.get('/logout', function(req, res){
     console.log("logged out");
-    req.logout();
+    req.logOut();
     res.redirect('/');
 });
 

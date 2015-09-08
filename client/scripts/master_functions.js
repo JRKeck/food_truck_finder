@@ -7,10 +7,6 @@ $(document).ready(function(){
     // Check to see if we can get the users info
     userGetInfo();
 
-    // Log the user out
-    $('.user-logout').on('click', function(){
-        userLogout();
-    });
 
     $('.user-expand').on('click', function(){
         console.log("clicked");
@@ -18,14 +14,6 @@ $(document).ready(function(){
     })
 
 });
-
-function userLogout(){
-    $.ajax({
-        url: "/user/logout",
-        success: function(){
-        }
-    });//End ajax call
-}
 
 function userGetInfo(){
     $.ajax({
