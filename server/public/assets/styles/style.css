@@ -20,8 +20,8 @@ body {
 #wrap {
   min-height: 100%;
   height: 100%;
-  margin: 0 auto -70px 0;
-  padding: 0 0 70px 0; }
+  margin: 0 auto -60px 0;
+  padding: 0 0 60px 0; }
   #wrap .center-container {
     padding: 50px 0 0 0;
     margin: 0;
@@ -52,7 +52,7 @@ header {
     display: none; }
 
 footer {
-  height: 70px; }
+  height: 60px; }
 
 /* header.scss */
 header {
@@ -60,7 +60,7 @@ header {
   height: 50px;
   background-color: #E5574E;
   color: #fff;
-  z-index: 2;
+  z-index: 60;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); }
@@ -70,12 +70,41 @@ header {
       color: #23ACD1; }
   header .logo {
     float: left;
-    font-size: 18px; }
+    font-size: 18px;
+    margin-top: 4px;
+    text-transform: uppercase;
+    font-weight: 100; }
     header .logo a:hover {
       text-decoration: none;
       color: inherit; }
   header .user {
-    float: right; }
+    float: right;
+    margin-right: 5px; }
+    header .user .user-info {
+      display: none; }
+      header .user .user-info .user-img, header .user .user-info .user-name, header .user .user-info .user-expand {
+        display: inline-block;
+        vertical-align: middle; }
+      header .user .user-info .user-img {
+        width: 30px; }
+        header .user .user-info .user-img img {
+          border: 2px solid #fff;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          border-radius: 50%;
+          background-clip: padding-box; }
+      header .user .user-info .user-name {
+        font-size: 18px;
+        font-weight: 100;
+        margin-left: 5px;
+        display: none; }
+        @media (min-width: 825px) {
+          header .user .user-info .user-name {
+            display: inline-block; } }
+      header .user .user-info .user-expand {
+        padding-top: 5px;
+        cursor: pointer; }
     header .user .user-login {
       display: none;
       margin-top: 2px; }
@@ -95,6 +124,27 @@ header {
           background-color: #fff;
           color: #E5574E;
           text-decoration: none; }
+
+.user-extended {
+  display: none;
+  z-index: 60;
+  background-color: #E5574E;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  padding: 3px 32px 10px;
+  text-align: right;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-clip: padding-box; }
+  .user-extended a {
+    color: #fff;
+    text-decoration: none; }
+    .user-extended a:hover {
+      color: #fff;
+      text-decoration: none; }
 
 /* login-register.scss */
 .card {
@@ -225,12 +275,14 @@ form {
     margin: 0;
     padding: 10px 0 4px; }
   .checkin .checkin-bottom .address p {
-    margin: 0 10px; }
+    margin: 0 10px;
+    font-weight: 100; }
   .checkin .checkin-bottom .time p {
     margin: 4px 10px 0; }
     .checkin .checkin-bottom .time p input {
       padding: 5px;
-      width: 100%; }
+      width: 100%;
+      font-weight: 100; }
   .checkin .checkin-bottom .send-location {
     width: 100%;
     margin-top: 15px; }
@@ -459,6 +511,7 @@ footer {
     position: absolute;
     height: 100%;
     width: 100%;
+    text-align: center;
     -webkit-box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
     box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3); }
@@ -467,3 +520,9 @@ footer {
       padding: 10px;
       cursor: pointer;
       height: 100%; }
+      footer .footer-nav .nav-item a {
+        color: #fff;
+        text-decoration: none; }
+        footer .footer-nav .nav-item a:hover {
+          color: #fff;
+          text-decoration: none; }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--STYLES-->
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/vendors/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="/vendors/timepicker/jquery.timepicker.css">
     <link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet'/>
@@ -25,10 +26,15 @@
                 <a href="/login">Sign In</a>
             </div>
             <div class="user-info">
-
+                <div class="user-img"><img class="img-responsive" src="/assets/images/blank_user.jpg" alt=""/></div>
+                <div class="user-name"></div>
+                <div class="user-expand"><i class="material-icons">&#xE5CF;</i></div>
             </div>
         </div>
     </header>
+    <div class="user-extended">
+        <a class="user-logout" href="#">Sign Out</a>
+    </div>
     <!-- Begin page content -->
     <div class="center-container">
         <div class="container-fluid content-container checkin">
@@ -60,7 +66,7 @@
                 <div class="checkin-bottom col-xs-12">
                     <div class="address">
                         <h2>You are checking in at:</h2>
-                        <p>1234 5th street</p>
+                        <p></p>
                     </div>
                     <div class="time">
                         <h2>What time will you be leaving?</h2>
@@ -77,7 +83,7 @@
     </div>
 </div>
 <footer>
-    Footer
+
 </footer>
 <!--Scripts-->
 <script src='/vendors/jquery/jquery.min.js'></script>

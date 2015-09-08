@@ -5,7 +5,7 @@ header {
   height: $header-height;
   background-color: $color-accent;
   color: $color-white;
-  z-index: 2;
+  z-index: 60;
   @include box-shadow(0, 5px, 10px, rgba(0,0,0,0.3), $inset: false);
   a {
     color: $color-white;
@@ -16,6 +16,9 @@ header {
   .logo {
     float: left;
     font-size: 18px;
+    margin-top: 4px;
+    text-transform: uppercase;
+    font-weight: 100;
     a{
       &:hover{
         text-decoration: none;
@@ -25,6 +28,36 @@ header {
   }
   .user {
     float: right;
+    margin-right: 5px;
+    .user-info {
+      display: none;
+      .user-img,.user-name,.user-expand {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .user-img {
+        width: 30px;
+        img {
+          border: 2px solid $color-white;
+          @include border-radius(50%);
+        }
+      }
+      .user-name {
+        font-size: 18px;
+        font-weight: 100;
+        margin-left: 5px;
+        display: none;
+        @media (min-width: $breakpoint-map-menu){
+          display: inline-block;
+        }
+
+      }
+      .user-expand {
+        padding-top: 5px;
+        cursor: pointer;
+      }
+
+    }
     .user-login {
       display: none;
       margin-top: 2px;
@@ -42,6 +75,25 @@ header {
           text-decoration: none;
         }
       }
+    }
+  }
+}
+.user-extended {
+  display: none;
+  z-index: 60;
+  background-color: $color-accent;
+  position: absolute;
+  top: $header-height;
+  right: 10px;
+  padding: 3px 32px 10px;
+  text-align: right;
+  @include border-bottom-radius(5px);
+  a {
+    color: $color-white;
+    text-decoration: none;
+    &:hover {
+      color: $color-white;
+      text-decoration: none;
     }
   }
 }

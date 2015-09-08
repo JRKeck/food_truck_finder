@@ -31,6 +31,7 @@ router.get('/getprofile', function(req, res, next){
     }
 });
 router.get('/logout', function(req, res, next){
+    console.log("logged out");
     req.logout();
     res.redirect('/');
 });

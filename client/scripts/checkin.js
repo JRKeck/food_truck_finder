@@ -54,7 +54,7 @@ function forwardGeocode(lat,lng){
 
 function displayCheckinData(data){
     checkinObj.addressFull = data.features[0].place_name;
-    checkinObj.addressNumber = data.features[0].address;
+    checkinObj.streetNumber = data.features[0].address;
     checkinObj.addressShort = data.features[0].text;
     checkinObj.addressCity = data.features[1].text;
 

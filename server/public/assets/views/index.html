@@ -24,27 +24,32 @@
                 <a href="/login">Sign In</a>
             </div>
             <div class="user-info">
-
+                <div class="user-img"><img class="img-responsive" src="/assets/images/blank_user.jpg" alt=""/></div>
+                <div class="user-name"></div>
+                <div class="user-expand"><i class="material-icons">&#xE5CF;</i></div>
             </div>
         </div>
     </header>
+    <div class="user-extended">
+        <a class="user-logout" href="#">Sign Out</a>
+    </div>
     <!-- Begin page content -->
     <div class="center-container">
         <div class="map-container">
-                <div class="trucks-nearby">
-                    <div class="trucks-nearby-header">
-                        <div class="menu-close">
-                            <i class="material-icons">&#xE888;</i>
-                        </div>
-                        <h2>Food Trucks Nearby</h2>
+            <div class="trucks-nearby">
+                <div class="trucks-nearby-header">
+                    <div class="menu-close">
+                        <i class="material-icons">&#xE888;</i>
+                    </div>
+                    <h2>Food Trucks Nearby</h2>
 
-                    </div>
-                    <div id="listings" class="truck-listing">
-                        <!--Truck listings will populate from DB here-->
-                    </div>
-                    <div class="trucks-nearby-footer">
-                    </div>
                 </div>
+                <div id="listings" class="truck-listing">
+                    <!--Truck listings will populate from DB here-->
+                </div>
+                <div class="trucks-nearby-footer">
+                </div>
+            </div>
             <div id="map">
                 <!--Mapbox targets map id to place map-->
                 <div class="map-active">

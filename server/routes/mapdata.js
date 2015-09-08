@@ -34,6 +34,7 @@ router.post('/addtrucklocation', function(req, res, next){
             },
             "properties": {
                 "truckName": req.user.displayName,
+                "streetNumber": req.body.streetNumber,
                 "simpleAddress": req.body.addressShort,
                 "city": req.body.addressCity,
                 "fullAddress": req.body.addressFull,

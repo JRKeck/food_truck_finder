@@ -72,7 +72,7 @@ function populateMap(markerObj){
         var prop = marker.feature.properties;
 
         // For each marker on the map set pop up and list infoE
-        var popup = '<h3>'+prop.truckName+'</h3><div class="info">' + prop.simpleAddress;
+        var popup = '<h3>'+prop.truckName+'</h3><div class="info">'+prop.streetNumber+ ' ' + prop.simpleAddress;
         popup += '</div>';
         var truck = (document.createElement('div'));
         truck.className = 'truck';
@@ -83,7 +83,7 @@ function populateMap(markerObj){
         link.className = 'truck-link';
 
         link.innerHTML = "<h3>"+  prop.truckName + "</h3>";
-        link.innerHTML += "<div class='address'>"+prop.simpleAddress+"</div>";
+        link.innerHTML += "<div class='address'>"+prop.streetNumber+" "+prop.simpleAddress+"</div>";
         link.innerHTML += "<div class='city'>"+prop.city+"</div></div>";
         link.innerHTML += "<div class='distance'>"+distance+" mi. away</div></div>";
 

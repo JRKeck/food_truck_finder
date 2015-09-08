@@ -12,6 +12,11 @@ $(document).ready(function(){
         userLogout();
     });
 
+    $('.user-expand').on('click', function(){
+        console.log("clicked");
+        $('.user-extended').slideToggle("fast");
+    })
+
 });
 
 function userLogout(){
@@ -39,7 +44,8 @@ function userGetInfo(){
 }
 
 function displayProfile(){
-    $('.user-info').html(userObj.displayName);
+    $('.user-info').show();
+    $('.user-info .user-name').html(userObj.displayName);
 }
 
 Date.prototype.addHours= function(h){
