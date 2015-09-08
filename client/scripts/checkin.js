@@ -17,7 +17,7 @@ function getCheckinLocation(){
     map.on('locationfound', function(e) {
         forwardGeocode(e.latlng.lat, e.latlng.lng);
         console.log('location found');
-        map.setView([e.latlng.lat, e.latlng.lng], 16);
+        map.setView([e.latlng.lat, e.latlng.lng], 15);
 
         clientLocLayer.setGeoJSON({
             type: 'Feature',
@@ -26,11 +26,15 @@ function getCheckinLocation(){
                 coordinates: [e.latlng.lng, e.latlng.lat]
             },
             properties: {
-                'title': 'Here I am!',
-                'marker-color': '#04A195',
-                'marker-symbol': 'rocket'
+                'marker-color': '#E5574E',
+                'marker-symbol': 'star'
             }
         });
+
+        //Fade out the loading screen once the location is found
+        $('.loading-screen').fadeOut( "fast", function() {
+        });
+
     });
     map.on('locationerror', function() {
         console.log('Position could not be found');
@@ -56,7 +60,11 @@ function displayCheckinData(data){
 
     console.log(checkinObj);
 
-    $('.checkin-info .address').append(checkinObj.addressNumber +" "+ checkinObj.addressShort);
+
+    $('.address p').html(checkinObj.addressFull);
+    $('.checkin-bottom').slideDown( "slow", function() {
+        // Animation complete.
+    });
 }
 
 function submitCheckinData(){
@@ -75,9 +83,10 @@ function submitCheckinData(){
 function checkinMapHeight(){
     // Get height of parent div
     var mapHeight = $('.checkin-map-container').innerHeight();
-    var headerHeight = $('.checkin-map-container h2').outerHeight();
+    var headerHeight = $('.checkin-map-container h1').outerHeight();
     // set map Height
     mapHeight = mapHeight - headerHeight;
+    $('.loading-screen').css('height', mapHeight+'px');
     $('#map').css('height', mapHeight+'px');
 }
 
@@ -90,6 +99,8 @@ var map = L.mapbox.map('map', 'jrkeck.7fbfb356');
 map.setView([44.98,-93.2638], 13);
 
 getCheckinLocation();
+
+
 $(document).ready(function() {
     $('body').on('click', '.send-location', function(){
         console.log('click event');
@@ -99,5 +110,14 @@ $(document).ready(function() {
 
     $( window ).resize(function() {
         checkinMapHeight();
+    });
+
+
+    $('#setTime').timepicker();
+    console.log(new Date());
+    $('#setTime').timepicker('setTime', new Date().addHours(4));
+    $('#setTime').on('changeTime', function() {
+        console.log($('#setTime').val());
+        //$('#onselectTarget').text($(this).val());
     });
 });

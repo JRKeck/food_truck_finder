@@ -1,5 +1,6 @@
 var mapboxToken = 'pk.eyJ1IjoianJrZWNrIiwiYSI6IjgzZTA0NmVhOGUxMjc2NjhmODYwYmQ3ZGIyZTRkOWQ1In0.XM9mizd6bF8zCqwafrGLDQ';
 
+var userObj = {};
 //Document ready actions for all pages
 $(document).ready(function(){
 
@@ -26,7 +27,9 @@ function userGetInfo(){
         url: "/user/getprofile",
         success: function(data){
             if(data.email) {
-                displayProfile(data);
+                userObj.displayName = data.displayName;
+                userObj.type = data.userType;
+                displayProfile();
             }
             else{
                 $('.user-login').show();
@@ -35,7 +38,11 @@ function userGetInfo(){
     });//End ajax call
 }
 
-function displayProfile(user){
-    $('.user-info').html(user.displayName);
+function displayProfile(){
+    $('.user-info').html(userObj.displayName);
 }
 
+Date.prototype.addHours= function(h){
+    this.setHours(this.getHours()+h);
+    return this;
+};

@@ -74,6 +74,8 @@ gulp.task('copy-vendors', function() {
         .pipe(gulp.dest('server/public/vendors/bootstrap'));
     gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/jquery/dist/jquery.min.map'])
         .pipe(gulp.dest('server/public/vendors/jquery'));
+    gulp.src(['node_modules/timepicker/jquery.timepicker.min.js','node_modules/timepicker/jquery.timepicker.css'])
+        .pipe(gulp.dest('server/public/vendors/timepicker'));
 });
 
 // Watch Files For Changes
