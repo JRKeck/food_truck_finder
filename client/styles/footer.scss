@@ -25,6 +25,14 @@ footer {
           text-decoration: none;
         }
       }
+      i {
+        font-size: 25px;
+      }
+    }
+    @media (min-width: $breakpoint-map-menu){
+      .map-list {
+        display: none;
+      }
     }
   }
 }
